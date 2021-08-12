@@ -1,21 +1,103 @@
-﻿Build started 20-Aug-20 12:46:51 AM.
-     1>Project "I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" on node 2 (build target(s)).
+﻿Build started 8/13/2021 4:23:04 AM.
+     1>Project "F:\1_2_games\Game_development\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\iGraphics Project.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt PictureDemo.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt BallDemo.cpp PictureDemo.cpp
          PictureDemo.cpp
+         BallDemo.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\Debug\iGraphics Project.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\iGraphics Project.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\Debug\iGraphics Project.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\Debug\iGraphics Project.lib" /MACHINE:X86 Debug\PictureDemo.obj
-         LINK : I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\Debug\iGraphics Project.exe not found or not built by the last incremental link; performing full link
-         iGraphics Project.vcxproj -> I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\Debug\iGraphics Project.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\Debug\iGraphics Project.exe;#1" /manifest "Debug\iGraphics Project.exe.intermediate.manifest"
-       FinalizeBuildStatus:
-         Deleting file "Debug\iGraphics Project.unsuccessfulbuild".
-         Touching "Debug\iGraphics Project.lastbuildstate".
-     1>Done Building Project "I:\Teaching\AUST\CSE 1200 - Software Development II\Fall 19\iGraphics\iGraphics All (Junaed)\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" (build target(s)).
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\iGraphics Project.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.lib" /MACHINE:X86 Debug\BallDemo.obj
+         Debug\PictureDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_failure_reason already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_image_free already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_set_flip_vertically_on_load already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load_from_file already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load_from_file_16 already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load_16 already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load_16_from_memory already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load_16_from_callbacks already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load_from_memory already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_load_from_callbacks already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_loadf_from_memory already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_loadf_from_callbacks already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_loadf already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_loadf_from_file already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_is_hdr_from_memory already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_is_hdr already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_is_hdr_from_file already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_is_hdr_from_callbacks already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_ldr_to_hdr_gamma already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_ldr_to_hdr_scale already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_hdr_to_ldr_gamma already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_hdr_to_ldr_scale already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_zlib_decode_malloc_guesssize already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_zlib_decode_malloc already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_zlib_decode_malloc_guesssize_headerflag already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_zlib_decode_buffer already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_zlib_decode_noheader_malloc already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_zlib_decode_noheader_buffer already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_set_unpremultiply_on_load already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_convert_iphone_png_to_rgb already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_info already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_info_from_file already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_info_from_memory already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _stbi_info_from_callbacks already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int __cdecl iSetTimer(int,void (__cdecl*)(void))" (?iSetTimer@@YAHHP6AXXZ@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iPauseTimer(int)" (?iPauseTimer@@YAXH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iResumeTimer(int)" (?iResumeTimer@@YAXH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iShowBMP2(int,int,char * const,int)" (?iShowBMP2@@YAXHHQADH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iShowBMP(int,int,char * const)" (?iShowBMP@@YAXHHQAD@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "unsigned int __cdecl iLoadImage(char * const)" (?iLoadImage@@YAIQAD@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iShowImage(int,int,int,int,unsigned int)" (?iShowImage@@YAXHHHHI@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iGetPixelColor(int,int,int * const)" (?iGetPixelColor@@YAXHHQAH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iText(double,double,char *,void *)" (?iText@@YAXNNPADPAX@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iPoint(double,double,int)" (?iPoint@@YAXNNH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iLine(double,double,double,double)" (?iLine@@YAXNNNN@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iFilledPolygon(double * const,double * const,int)" (?iFilledPolygon@@YAXQAN0H@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iPolygon(double * const,double * const,int)" (?iPolygon@@YAXQAN0H@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iRectangle(double,double,double,double)" (?iRectangle@@YAXNNNN@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iFilledRectangle(double,double,double,double)" (?iFilledRectangle@@YAXNNNN@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iFilledCircle(double,double,double,int)" (?iFilledCircle@@YAXNNNH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iCircle(double,double,double,int)" (?iCircle@@YAXNNNH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iEllipse(double,double,double,double,int)" (?iEllipse@@YAXNNNNH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iFilledEllipse(double,double,double,double,int)" (?iFilledEllipse@@YAXNNNNH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iRotate(double,double,double)" (?iRotate@@YAXNNN@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iUnRotate(void)" (?iUnRotate@@YAXXZ) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iSetColor(double,double,double)" (?iSetColor@@YAXNNN@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iDelay(int)" (?iDelay@@YAXH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iDelayMS(int)" (?iDelayMS@@YAXH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iClear(void)" (?iClear@@YAXXZ) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl displayFF(void)" (?displayFF@@YAXXZ) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl animFF(void)" (?animFF@@YAXXZ) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl keyboardHandler1FF(unsigned char,int,int)" (?keyboardHandler1FF@@YAXEHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl keyboardHandler2FF(int,int,int)" (?keyboardHandler2FF@@YAXHHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl mouseMoveHandlerFF(int,int)" (?mouseMoveHandlerFF@@YAXHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl passiveMouseHandlerFF(int,int)" (?passiveMouseHandlerFF@@YAXHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl mouseHandlerFF(int,int,int,int)" (?mouseHandlerFF@@YAXHHHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iInitialize(int,int,char *)" (?iInitialize@@YAXHHPAD@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iStart(void)" (?iStart@@YAXXZ) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iDraw(void)" (?iDraw@@YAXXZ) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iMouseMove(int,int)" (?iMouseMove@@YAXHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iPassiveMouse(int,int)" (?iPassiveMouse@@YAXHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iMouse(int,int,int,int)" (?iMouse@@YAXHHHH@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iKeyboard(unsigned char)" (?iKeyboard@@YAXE@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void __cdecl iSpecialKeyboard(unsigned char)" (?iSpecialKeyboard@@YAXE@Z) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: _main already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int iScreenWidth" (?iScreenWidth@@3HA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int iScreenHeight" (?iScreenHeight@@3HA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int iMouseY" (?iMouseY@@3HA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int iMouseX" (?iMouseX@@3HA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int * iAnimDelays" (?iAnimDelays@@3PAHA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int * iAnimPause" (?iAnimPause@@3PAHA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int ifft" (?ifft@@3HA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "void (__cdecl** iAnimFunction)(void)" (?iAnimFunction@@3PAP6AXXZA) already defined in BallDemo.obj
+     1>PictureDemo.obj : error LNK2005: "int iAnimCount" (?iAnimCount@@3HA) already defined in BallDemo.obj
+     1>F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.exe : fatal error LNK1169: one or more multiply defined symbols found
+     1>Done Building Project "F:\1_2_games\Game_development\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" (build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.00
+Time Elapsed 00:00:01.74
