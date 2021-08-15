@@ -40,10 +40,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PictureDemo.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BallDemo.cpp">
+    <ClCompile Include="Greed_island.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

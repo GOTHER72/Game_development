@@ -93,11 +93,12 @@ void iSpecialKeyboard(unsigned char key)
 }
 
 
+
 int main()
 {
 	//place your own initialization codes here. 
-	iInitialize(400, 400, "demo");
-	iStart();
+	iInitialize(400, 400, " ha ha ha");
+	//iStart();
 
 
 	return 0;
