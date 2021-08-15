@@ -15,31 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="girl.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="smurf.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="iGraphics.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="glaux.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="glut.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="bitmap_loader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="stb_image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Greed_island.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

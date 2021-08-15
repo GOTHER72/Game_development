@@ -1,17 +1,57 @@
+/*
+	author: S. M. Shahriar Nirjon
+	last modified: August 8, 2008
+*/
+#include <stdio.h>
+#include <stdlib.h>
 # include "iGraphics.h"
 
-int x = 300, y = 300, r =15;
+int ball_x, ball_y;
+int dx, dy;
+
+int rect_x, rect_y;
+int rect_dx, rect_dy;
+
+int screen_width = 800 ;
+int screen_height = 800;
 
 /* 
 	function iDraw() is called again and again by the system.
-	
 */
 void iDraw()
 {
-	//place your drawing codes here
+	//place your drawing codes here	
+
 	iClear();
-	iSetColor(20,200,255);
-	iFilledCircle(x,y,r);
+
+    // iSetColor(255, 255, 255);
+	// iFilledCircle(ball_x, ball_y, 20);
+
+
+	// iSetColor(200,155, 145);
+	// iFilledCircle((ball_x /2) + 10 , (ball_y / 2) + 10, 20);
+
+	iSetColor(250, 225, 0);
+	iFilledRectangle(0,0,800,800);
+
+	iSetColor(144, 13, 255);
+	iFilledRectangle(500,rect_y,30,40);
+
+	iFilledRectangle(100,rect_y,30,40);
+	iFilledRectangle(300,rect_y,30,40);
+	iFilledRectangle(700,rect_y,30,40);
+
+
+	
+
+	
+	iSetColor(39, 39, 39);
+	iText(10, 10, "Press p for pause, r for resume, END for exit.");
+
+	iText(10, 790, "Hello bro you did good");
+
+	// iSetColor(233, 244, 200);
+	// iText(30, 30, "Hello bro you did good");
 }
 
 /*
@@ -22,6 +62,7 @@ void iMouseMove(int mx, int my)
 {
 	//place your codes here
 }
+
 
 /*
 	function iPassiveMouse() is called when the user moves the mouse.
@@ -40,18 +81,11 @@ void iMouse(int button, int state, int mx, int my)
 {
 	if(button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
 	{
-		//place your codes here	
-		//printf("x = %d, y= %d\n",mx,my);
-		x += 5;
-		y +=5;
-
+		//place your codes here
 	}
 	if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
 	{
-		//place your codes here	
-			x -= 5;
-			y -=5;
-		
+		//place your codes here
 	}
 }
 
@@ -94,11 +128,33 @@ void iSpecialKeyboard(unsigned char key)
 
 
 
+void ballChange(){
+	ball_x += dx;
+	ball_y += dy;
+
+	if(ball_x > screen_width || ball_x < 0)dx = -dx;
+	if(ball_y > screen_height || ball_y < 0)dy = -dy;
+}
+void rectangle_change(){
+	
+	rect_y += rect_dy;
+
+	if(rect_y + 40 > screen_height || rect_y < 0)rect_dy = -rect_dy;
+
+}
+
 int main()
 {
 	//place your own initialization codes here. 
-	iInitialize(400, 400, " ha ha ha");
-	//iStart();
+	//iSetTimer(5, ballChange);
+	iSetTimer(5, rectangle_change);
+	
+	dx = 5;
+	dy = 7;
+
+	rect_dy = 5;
+	iInitialize(screen_width , screen_height, " Greed island");
+	iStart();
 
 
 	return 0;
