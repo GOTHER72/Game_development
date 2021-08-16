@@ -1,6 +1,8 @@
 /*
-	author: S. M. Shahriar Nirjon
-	last modified: August 8, 2008
+	author: Tabassum Tara Lamia
+			Parvez Ahammed
+			Chandrima Sarker Shipra
+
 */
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,22 +26,23 @@ void iDraw()
 
 	iClear();
 
-    // iSetColor(255, 255, 255);
-	// iFilledCircle(ball_x, ball_y, 20);
-
-
-	// iSetColor(200,155, 145);
-	// iFilledCircle((ball_x /2) + 10 , (ball_y / 2) + 10, 20);
+    
 
 	iSetColor(250, 225, 0);
 	iFilledRectangle(0,0,800,800);
 
 	iSetColor(144, 13, 255);
-	iFilledRectangle(500,rect_y,30,40);
 
-	iFilledRectangle(100,rect_y,30,40);
-	iFilledRectangle(300,rect_y,30,40);
-	iFilledRectangle(700,rect_y,30,40);
+	 
+	iFilledCircle( 450 , 80, 20);
+	iFilledCircle( 490 , 80, 20);
+	// iFilledCircle((ball_x /2) + 10 , (ball_y / 2) + 10, 20);
+
+	
+	iFilledRectangle(455,rect_y,30,80);
+	// iFilledRectangle(100,rect_y,30,40);
+	// iFilledRectangle(300,rect_y,30,40);
+	// iFilledRectangle(700,rect_y,30,40);
 
 
 	
@@ -128,31 +131,43 @@ void iSpecialKeyboard(unsigned char key)
 
 
 
+// void ballChange(){
+// 	ball_x += dx;
+// 	ball_y += dy;
+
+// 	if(ball_x > screen_width || ball_x < 0)dx = -dx;
+// 	if(ball_y > screen_height || ball_y < 0)dy = -dy;
+// }
+
+
 void ballChange(){
-	ball_x += dx;
 	ball_y += dy;
 
-	if(ball_x > screen_width || ball_x < 0)dx = -dx;
-	if(ball_y > screen_height || ball_y < 0)dy = -dy;
+	//if(ball_x +40  > screen_width || ball_x+40  < 0)dx = -dx;
+	if(ball_y +40 > screen_height || ball_y+40  < 0)dy = -dy;
 }
+
+
 void rectangle_change(){
 	
 	rect_y += rect_dy;
 
-	if(rect_y + 40 > screen_height || rect_y < 0)rect_dy = -rect_dy;
+	
+
+	 if(rect_y + 80 > 160 || rect_y < 0)rect_dy = -rect_dy;
 
 }
 
 int main()
 {
 	//place your own initialization codes here. 
-	//iSetTimer(5, ballChange);
+	iSetTimer(5, ballChange);
 	iSetTimer(5, rectangle_change);
 	
 	dx = 5;
 	dy = 7;
 
-	rect_dy = 5;
+	rect_dy = 7;
 	iInitialize(screen_width , screen_height, " Greed island");
 	iStart();
 
