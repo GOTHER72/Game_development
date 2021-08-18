@@ -32,6 +32,8 @@ void iDraw()
 	iFilledRectangle(0,0,800,800);
 
 	iSetColor(144, 13, 255);
+
+	
  
 	iFilledCircle( 100 , 80, 20);
 	iFilledCircle( 500 , 80, 20);
@@ -171,4 +173,6 @@ int main()
 
 	return 0;
 }
+
+//cahndrima ekta valo baccha
 
