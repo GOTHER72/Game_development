@@ -170,9 +170,13 @@ int main()
 	iInitialize(screen_width , screen_height, " Greed island");
 	iStart();
 
+	//chandrima ekta xoss baccha
+
+	//hah haha
+
 
 	return 0;
 }
 
-//cahndrima ekta valo baccha
+//chandrima ekta valo baccha
 
