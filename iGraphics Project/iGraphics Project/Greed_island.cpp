@@ -32,10 +32,9 @@ void iDraw()
 	iFilledRectangle(0,0,800,800);
 
 	iSetColor(144, 13, 255);
-
-	 
-	iFilledCircle( 450 , 80, 20);
-	iFilledCircle( 490 , 80, 20);
+ 
+	iFilledCircle( 100 , 80, 20);
+	iFilledCircle( 500 , 80, 20);
 	// iFilledCircle((ball_x /2) + 10 , (ball_y / 2) + 10, 20);
 
 	
@@ -44,8 +43,6 @@ void iDraw()
 	// iFilledRectangle(300,rect_y,30,40);
 	// iFilledRectangle(700,rect_y,30,40);
 
-
-	
 
 	
 	iSetColor(39, 39, 39);
@@ -144,7 +141,7 @@ void ballChange(){
 	ball_y += dy;
 
 	//if(ball_x +40  > screen_width || ball_x+40  < 0)dx = -dx;
-	if(ball_y +40 > screen_height || ball_y+40  < 0)dy = -dy;
+	if(ball_y +400 > screen_height || ball_y+400  < 0)dy = -dy;
 }
 
 
@@ -154,7 +151,7 @@ void rectangle_change(){
 
 	
 
-	 if(rect_y + 80 > 160 || rect_y < 0)rect_dy = -rect_dy;
+	 if(rect_y + 80 > 560 || rect_y < 0)rect_dy = -rect_dy;
 
 }
 
