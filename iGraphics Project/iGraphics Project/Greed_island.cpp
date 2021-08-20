@@ -26,8 +26,7 @@ void iDraw()
 
 	iClear();
 
-    
-
+   
 	iSetColor(250, 225, 0);
 	iFilledRectangle(0,0,800,800);
 
@@ -136,7 +135,6 @@ void iSpecialKeyboard(unsigned char key)
 // 	if(ball_y > screen_height || ball_y < 0)dy = -dy;
 // }
 
-
 void ballChange(){
 	ball_y += dy;
 
@@ -149,9 +147,7 @@ void rectangle_change(){
 	
 	rect_y += rect_dy;
 
-	
-
-	 if(rect_y + 80 > 560 || rect_y < 0)rect_dy = -rect_dy;
+	 if(rect_y + 80 > 200 || rect_y < 0)rect_dy = -rect_dy;
 
 }
 
@@ -159,7 +155,7 @@ int main()
 {
 	//place your own initialization codes here. 
 	iSetTimer(5, ballChange);
-	iSetTimer(5, rectangle_change);
+	iSetTimer(1, rectangle_change);
 	
 	dx = 5;
 	dy = 7;
