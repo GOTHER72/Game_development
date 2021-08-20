@@ -31,6 +31,8 @@ void iDraw()
 	iFilledRectangle(0,0,800,800);
 
 	iSetColor(144, 13, 255);
+
+	
  
 	iFilledCircle( 100 , 80, 20);
 	iFilledCircle( 500 , 80, 20);
@@ -164,7 +166,13 @@ int main()
 	iInitialize(screen_width , screen_height, " Greed island");
 	iStart();
 
+	//chandrima ekta xoss baccha
+
+	//hah haha
+
 
 	return 0;
 }
+
+//chandrima ekta valo baccha
 
