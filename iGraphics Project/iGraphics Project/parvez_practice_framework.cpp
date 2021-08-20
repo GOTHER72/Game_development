@@ -238,3 +238,18 @@ int main()
 	return 0;
 }
 
+//this is the code i wrote for the vediot you can run it on your end to see everythin
+//ok i am running it now then
+
+//before commiting any changes try to pull it first then you wont face the problem I hope got it ?
+
+//yes
+
+// ok now then lets have a look at the surviving aust game 
+
+//is the music on ?yes
+
+//okay then lets find out where the sound is coming form
+
+//open the project folder of surviving aus
+

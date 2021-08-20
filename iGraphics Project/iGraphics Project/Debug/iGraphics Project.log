@@ -1,30 +1,12 @@
-<<<<<<< HEAD
-﻿Build started 8/20/2021 6:18:16 AM.
-     1>Project "F:\1_2_games\Game_development\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\iGraphics Project.unsuccessfulbuild" because "AlwaysCreate" was specified.
-       ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt parvez_practice_vertical_block.cpp
-         parvez_practice_vertical_block.cpp
-       Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\iGraphics Project.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.lib" /MACHINE:X86 Debug\parvez_practice_vertical_block.obj
-         LINK : F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.exe not found or not built by the last incremental link; performing full link
-         iGraphics Project.vcxproj -> F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.exe
-=======
-﻿Build started 8/19/2021 3:40:14 AM.
+﻿Build started 8/20/2021 7:04:32 PM.
      1>Project "C:\Users\MSI Laptop\Desktop\New folder\Game_development\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\iGraphics Project.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Greed_island.cpp
-         Greed_island.cpp
+         All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\MSI Laptop\Desktop\New folder\Game_development\iGraphics Project\Debug\iGraphics Project.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\iGraphics Project.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\MSI Laptop\Desktop\New folder\Game_development\iGraphics Project\Debug\iGraphics Project.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\MSI Laptop\Desktop\New folder\Game_development\iGraphics Project\Debug\iGraphics Project.lib" /MACHINE:X86 Debug\Greed_island.obj
-         LINK : C:\Users\MSI Laptop\Desktop\New folder\Game_development\iGraphics Project\Debug\iGraphics Project.exe not found or not built by the last incremental link; performing full link
+         All outputs are up-to-date.
          iGraphics Project.vcxproj -> C:\Users\MSI Laptop\Desktop\New folder\Game_development\iGraphics Project\Debug\iGraphics Project.exe
->>>>>>> 4625e7b7fff4d06c32d98fee3b46b3751ee59c18
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\MSI Laptop\Desktop\New folder\Game_development\iGraphics Project\Debug\iGraphics Project.exe;#1" /manifest "Debug\iGraphics Project.exe.intermediate.manifest"
        FinalizeBuildStatus:
          Deleting file "Debug\iGraphics Project.unsuccessfulbuild".
          Touching "Debug\iGraphics Project.lastbuildstate".
@@ -32,8 +14,4 @@
 
 Build succeeded.
 
-<<<<<<< HEAD
-Time Elapsed 00:00:01.56
-=======
-Time Elapsed 00:00:01.95
->>>>>>> 4625e7b7fff4d06c32d98fee3b46b3751ee59c18
+Time Elapsed 00:00:00.03
