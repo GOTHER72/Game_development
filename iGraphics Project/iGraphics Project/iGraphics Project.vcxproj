@@ -71,7 +71,11 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="tara_practice.cpp" />
+=======
+    <ClCompile Include="Inputdemo_chandrima.cpp" />
+>>>>>>> 57578efea122eebd4ff8b63b83ef305ba1528a01
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
