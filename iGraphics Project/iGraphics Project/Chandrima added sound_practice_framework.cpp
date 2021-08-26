@@ -23,6 +23,7 @@ int rect_dy_3=13;
 
 int screen_width = 800;
 int screen_height = 800;
+bool musicOn = true;
 
 /* 
 	function iDraw() is called again and again by the system.
@@ -83,14 +84,14 @@ void iDraw()
 	
 	iSetColor(144, 13, 255);
 	iFilledRectangle(270,rect_y,30,80);
-    iFilledRectangle(335,rect_y_2,30,80);
+   /* iFilledRectangle(335,rect_y_2,30,80);
 	iFilledRectangle(395,rect_y_3,30,80);
 	
 	iFilledRectangle(455,rect_y,30,80);
     iFilledRectangle(575,rect_y_2,30,80);
 	iFilledRectangle(675,rect_y_3,30,80);
 
-
+	*/
     iSetColor(250, 225, 255);
     
 
@@ -196,16 +197,23 @@ void ballChange(){
 
 void rectangle_change_1(){
 	
-	rect_y += rect_dy;
-
+	
+			 if(rect_y == 0||rect_y==700){
+			 PlaySound("music\\dis.wav",NULL,SND_ASYNC);}
+			 rect_y += rect_dy;
+			 
 	 if(rect_y+80 > 800 || rect_y < 0)
-     {
-         rect_dy = -rect_dy;
+	 {
+		 
+		 rect_dy = -rect_dy;
      }
+
 }
 
 
 void rectangle_change_2(){
+	 if(rect_y_2 == 0||rect_y_2==730){
+			 PlaySound("music\\dis.wav",NULL,SND_ASYNC);}
 	rect_y_2 += rect_dy_2;
 	
 	if (rect_y_2 +80 > 800 || rect_y_2 < 0 )
@@ -215,6 +223,8 @@ void rectangle_change_2(){
 }
 
 void rectangle_change_3(){
+	 if(rect_y_3 == 0||rect_y_3==728){
+			 PlaySound("music\\dis.wav",NULL,SND_ASYNC);}
 	rect_y_3 += rect_dy_3;
 	
 	if (rect_y_3 +80 > 800 || rect_y_3 < 0 )
@@ -228,9 +238,10 @@ int main()
 	//place your own initialization codes here. 
 	//iSetTimer(5, ballChange);
 	iSetTimer(20, rectangle_change_1);
-	iSetTimer(20, rectangle_change_2);
-	iSetTimer(20, rectangle_change_3);
-	
+	//iSetTimer(20, rectangle_change_2);
+	//iSetTimer(20, rectangle_change_3);
+
+
 	iInitialize(screen_width , screen_height, " Greed island");
 	iStart();
 
@@ -238,18 +249,4 @@ int main()
 	return 0;
 }
 
-//this is the code i wrote for the vediot you can run it on your end to see everythin
-//ok i am running it now then
-
-//before commiting any changes try to pull it first then you wont face the problem I hope got it ?
-
-//yes
-
-// ok now then lets have a look at the surviving aust game 
-
-//is the music on ?yes
-
-//okay then lets find out where the sound is coming form
-
-//open the project folder of surviving aus
 
