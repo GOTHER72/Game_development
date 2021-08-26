@@ -43,10 +43,6 @@ void iDraw()
 	iFilledRectangle(0,0,800,800);
 
 	
-	iSetColor(255,255,255);
-    iFilledRectangle(rect_x1 +15 ,rect_y1 ,60,30);
-	
-
 
 	iSetColor(r1,g1,b1);
 	iFilledRectangle(rect_x + 15,rect_y + 45,60,30);
@@ -65,7 +61,7 @@ void iDraw()
 	
 
 	iSetColor(255,255,255);
-    iFilledRectangle(rect_x1 +15 ,rect_y1+45 ,60,30);
+    iFilledRectangle(rect_x1 +15 ,rect_y1+47 ,60,30);
 	
 
 	
@@ -163,43 +159,49 @@ void iSpecialKeyboard(unsigned char key)
 
 void collisionCheck()
 {
+	rect_y1 +=rect_dy;
 
-
-	if(rect_y1 + 60 > rect_y && rect_y1 < rect_y + 60)
+	if(rect_y1 > 0 &&  rect_y1 < 40)
 	{
 		r1 = 182;
 		g1 = 25;
 		b1 = 25;
-		iSetColor(39,39,39);
-		//iText(10,10,"Parina kn",GLUT_BITMAP_TIMES);
+		
 	}
    
-	if(rect_y1 + 120 > rect_y && rect_y1 < rect_y + 120)
+	if(rect_y1 > 41 && rect_y1 < 82 )
 	{
 		r2 = 182;
 		g2 = 25;
 		b2 = 25;
 
 	}
-	
+	if(rect_y1 > 84 && rect_y1 <130)
+	{
+		r3 = 182;
+		g3 = 25;
+		b3 = 25;
 
-
+	}
+	if(rect_y1 > 132 && rect_y1 < 160)
+	{
+		r4 = 182;
+		g4 = 25;
+		b4 = 25;
+	}
+	if( rect_y1 > 165 && rect_y1 < 178)
+	{
+		r5 = 182;
+		g5 = 25;
+		b5 = 25;
+	}
 
 	//printf("collision y=%d\n",rect_y1);
+//The blocks turned red when the white block touched their coordinates and the white block is working from bottom to topp 
 
 }
 
 
-void ballChange(){
-
-	
-	ball_y += dy;
-	
-	
-	if(ball_y  > 165 || ball_y   < 0)dy = -dy;
-	
-	
-}
 
 
 void rectangle_change(){
@@ -208,7 +210,8 @@ void rectangle_change(){
 
 	
 
-	 if(rect_y1  > 223 || rect_y1 < 47)rect_dy = -rect_dy;
+	 if(rect_y1  > 175 || rect_y1 < 0)rect_dy = -rect_dy;
+	 
 
 }
 
@@ -219,8 +222,7 @@ int main()
 	iSetTimer(35, rectangle_change);
 	
 	
-	dx = 5;
-	dy = 7;
+	
 
 	rect_dy = 7;
 	iInitialize(screen_width , screen_height, " Greed island");
@@ -229,4 +231,3 @@ int main()
 
 	return 0;
 }
-//yeah!
