@@ -40,7 +40,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Inputdemo_chandrima.cpp">
+    <ClCompile Include="parvez_modify_chandu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

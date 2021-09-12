@@ -1,22 +1,16 @@
-/*
-	author: Tabassum Tara Lamia
-			Parvez Ahammed
-			Chandrima Sarker Shipra
 
-*/
 #include <stdio.h>
 #include <stdlib.h>
 # include "iGraphics.h"
 
-int ball_x, ball_y;
-int dx, dy;
+
 
 int rect_x1, rect_y1;
 int rect_x, rect_y;
 int rect_dx, rect_dy;
 
-int screen_width = 400 ;
-int screen_height = 400;
+int frame_width = 1000 ;
+int frame_height = 610;
 
 int r=253,g=210,b=191;
 int r1=255, g1=107, b1=107;
@@ -42,12 +36,6 @@ void iDraw()
 	iSetColor(r,g,b);
 	iFilledRectangle(0,0,800,800);
 
-	
-	iSetColor(255,255,255);
-    iFilledRectangle(rect_x1 +15 ,rect_y1 ,60,30);
-	
-
-
 	iSetColor(r1,g1,b1);
 	iFilledRectangle(rect_x + 15,rect_y + 45,60,30);
 
@@ -65,7 +53,11 @@ void iDraw()
 	
 
 	iSetColor(255,255,255);
-    iFilledRectangle(rect_x1 +15 ,rect_y1+45 ,60,30);
+    iFilledRectangle(rect_x1 +15 ,rect_y1+47 ,60,30);
+
+	
+
+	
 	
 
 	
@@ -76,6 +68,12 @@ void iDraw()
 
 	// iSetColor(233, 244, 200);
 	// iText(30, 30, "Hello bro you did good");
+}
+
+void speedometer(){
+
+	
+
 }
 
 /*
@@ -135,7 +133,7 @@ void iKeyboard(unsigned char key)
 
 	if(key == 'l')
 	{
-		ball_x -=20;
+		//ball_x -=20;
 		collisionCheck();
 	}
 
@@ -163,52 +161,56 @@ void iSpecialKeyboard(unsigned char key)
 
 void collisionCheck()
 {
+	rect_y1 +=rect_dy;
 
-
-	if(rect_y1 + 60 > rect_y && rect_y1 < rect_y + 60)
+	if(rect_y1 > 0 &&  rect_y1 < 45) //0,40
 	{
 		r1 = 182;
 		g1 = 25;
 		b1 = 25;
-		iSetColor(39,39,39);
-		//iText(10,10,"Parina kn",GLUT_BITMAP_TIMES);
+		
 	}
    
-	if(rect_y1 + 120 > rect_y && rect_y1 < rect_y + 120)
+	if(rect_y1 > 41 && rect_y1 < 82 )//41,82
 	{
 		r2 = 182;
 		g2 = 25;
 		b2 = 25;
 
 	}
-	
+	if(rect_y1 > 84 && rect_y1 <130)//84,130
+	{
+		r3 = 182;
+		g3 = 25;
+		b3 = 25;
 
-
+	}
+	if(rect_y1 > 132 && rect_y1 < 160) //132,160
+	{
+		r4 = 182;
+		g4 = 25;
+		b4 = 25;
+	}
+	if( rect_y1 > 165 && rect_y1 < 178)//165,178
+	{
+		r5 = 182;
+		g5 = 25;
+		b5 = 25;
+	}
 
 	//printf("collision y=%d\n",rect_y1);
+//The blocks turned red when the white block touched their coordinates and the white block is working from bottom to topp 
 
 }
 
 
-void ballChange(){
-
-	
-	ball_y += dy;
-	
-	
-	if(ball_y  > 165 || ball_y   < 0)dy = -dy;
-	
-	
-}
 
 
 void rectangle_change(){
 	
 	rect_y1 += rect_dy;
-
-	
-
-	 if(rect_y1  > 223 || rect_y1 < 47)rect_dy = -rect_dy;
+	 if(rect_y1  > 175 || rect_y1 < 0)rect_dy = -rect_dy;
+	 
 
 }
 
@@ -219,14 +221,12 @@ int main()
 	iSetTimer(35, rectangle_change);
 	
 	
-	dx = 5;
-	dy = 7;
+	
 
 	rect_dy = 7;
-	iInitialize(screen_width , screen_height, " Greed island");
+	iInitialize(frame_width , frame_height, " Greed island");
 	iStart();
 
 
 	return 0;
 }
-
