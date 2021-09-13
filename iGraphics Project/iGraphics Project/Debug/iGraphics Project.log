@@ -1,17 +1,17 @@
-﻿Build started 9/13/2021 6:44:13 AM.
-     1>Project "F:\1_2_games\Game_development\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" on node 2 (build target(s)).
+﻿Build started 9/13/2021 1:29:10 PM.
+     1>Project "F:\1_2_games\practice\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\iGraphics Project.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
          All outputs are up-to-date.
        Link:
          All outputs are up-to-date.
-         iGraphics Project.vcxproj -> F:\1_2_games\Game_development\iGraphics Project\Debug\iGraphics Project.exe
+         iGraphics Project.vcxproj -> F:\1_2_games\practice\iGraphics Project\Debug\iGraphics Project.exe
        FinalizeBuildStatus:
          Deleting file "Debug\iGraphics Project.unsuccessfulbuild".
          Touching "Debug\iGraphics Project.lastbuildstate".
-     1>Done Building Project "F:\1_2_games\Game_development\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" (build target(s)).
+     1>Done Building Project "F:\1_2_games\practice\iGraphics Project\iGraphics Project\iGraphics Project.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.08
+Time Elapsed 00:00:00.26
