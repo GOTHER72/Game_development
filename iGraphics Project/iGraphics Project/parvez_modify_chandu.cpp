@@ -501,6 +501,7 @@ void rectangle_change_1(){
 
             rect_y_2 += rect_dy_2;
             rect_y_3 += rect_dy_3;
+			
 	 if (rect_y_3 +80 > frame_height || rect_y_3 < 0 )  rect_dy_3 = -rect_dy_3;
      if (rect_y_2 +80 > frame_height || rect_y_2 < 0 )  rect_dy_2 = -rect_dy_2;
     
