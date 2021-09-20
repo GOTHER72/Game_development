@@ -1,6 +1,6 @@
 int loadx;
 
-int frame_width = 1000, frame_height= 610 ;
+
 
 int play_button,control_button,story_button,about,exit_button;
 
@@ -15,10 +15,7 @@ int screen_level_1,screen_resume_game;
 int f=0;
 
 int menu_picture,high_score;
-// int menuBtnX=480;
-// int menuBtnY=500;
-//int score = 0;
-//int joystick = 1;
+
 
 bool showMenu = false,showGameOver=false,loadMenu=true,monkey_gayeb=false;
 bool showPlay=false,showAbout=false,showInst=false,showOption=false,showResult=false;
@@ -46,3 +43,15 @@ int rect_y_2;
 int rect_dy_2 =10;
 int rect_y_3;
 int rect_dy_3=13;
+
+
+/**=======================================================================================================================
+ *!                                                   Variable for text input
+ *=======================================================================================================================**/
+
+int screen_input;
+
+char player_name[100];
+int length;
+
+
