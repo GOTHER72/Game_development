@@ -19,19 +19,7 @@ point 12
 name adil
 point 8
 Name parvez
-
-Name asd
-Name asd
-Name oasd
-Name sasd
-Name asd
-Name dsf
-Name edfd
-Name a
-Name asd
-Name asd
-Name fdgdg
-Name ra
-Name asda
-Name asd
-Name ad
+Name adam
+Point 0
+Name parvez
+Point 0

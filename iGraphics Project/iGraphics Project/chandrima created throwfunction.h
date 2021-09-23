@@ -341,8 +341,9 @@ void  ball_throw_command(unsigned char key)
 					
 				printf("%d\n",left_chances);
 				left_chances--;
-				if(left_chances == 0 )
-				{
+				if(left_chances == (-1) )
+				{	
+					user_point_appender(game_point);
 					screen = 16;
 				}
 

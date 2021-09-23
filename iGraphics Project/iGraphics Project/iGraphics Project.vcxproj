@@ -62,6 +62,7 @@
   <ItemGroup>
     <ClInclude Include="bitmap_loader.h" />
     <ClInclude Include="chandrima created throwfunction.h" />
+    <ClInclude Include="file_handler.h" />
     <ClInclude Include="glaux.h" />
     <ClInclude Include="glut.h" />
     <ClInclude Include="iGraphics.h" />
