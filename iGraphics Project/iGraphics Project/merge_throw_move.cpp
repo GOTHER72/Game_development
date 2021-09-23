@@ -22,9 +22,6 @@ Chandrima sarker shipra 200104131 */
 #include "obstacle_move.h"
 #include "chandrima created throwfunction.h"
 
-
-
-
 /**================================================================================================
  *!                                        Function created by the developers
  *================================================================================================**/
@@ -73,7 +70,7 @@ void iDraw()
 	        iFilledRectangle(350,150,loadx,30);
 	        iText(450,120,"Loading . . .");
 	        }
-	        if(showMenu == true && loadMenu==false && monkey_gayeb==true)			///checking if game load is finished
+	        if(showMenu == true && loadMenu==false && monkey_gayeb==true) //checking if game load is finished
 	        {
 		        menu();
 	        }
@@ -91,13 +88,9 @@ void iDraw()
     if (screen == 7)  
     {
                 iShowImage(0,0,1000,610,screen_level_1);
-                
 				show_obstacle_image();	
    				changable_text();
                 screen_level_1_throw();  //! theres a issue here
-                
-
-
     }  
     if (screen == 8)     iShowImage(0,0,1000,610,screen_resume_game);
 	if (screen == 9)     iShowImage(0,0,1000,610,screen_member_light);
@@ -110,7 +103,6 @@ void iDraw()
 	if (screen == 15) 
 	{
 		iShowImage(0,0,1000,610,screen_input);
-
 		if(mode == 1) {
 		iSetColor(255, 255, 255);
 		iText(300, 300, player_name,GLUT_BITMAP_TIMES_ROMAN_24);
@@ -120,7 +112,6 @@ void iDraw()
 	if (screen == 16 )
 	{
 		iShowImage(0,0,screen_width,screen_height,screen_game_over);
-
 	}
 
 }
@@ -208,7 +199,7 @@ void iKeyboard(unsigned char key)
 	{
 			book_state =0;
 	}
-	if (key == 'r' && screen == 7 && book_state == 0) book_state = 1;
+	//if (key == 'r' && screen == 7 && book_state == 0) book_state = 1;
 
 	if ( key == 's' && screen == 7 && book_state == 1 ) user_point_appender(game_point);
 
@@ -241,14 +232,11 @@ void iSpecialKeyboard(unsigned char key)  //special key that will end the game
 void file_handler()
 {
 	file_line_counter();
-	printf("File line %d\nTotal User %d\n",total_lines,total_user);
+	//printf("File line %d\nTotal User %d\n",total_lines,total_user);
 	file_scanner();
 
 	point_array_modified = sort_decreasing_order( delete_duplicate_element(point_array) );
-
 	highest_score_printer();
-
-
 }
 
 
@@ -299,9 +287,11 @@ int main()
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	image_load();
     iSetTimer(200,menuLoad);
-    timer_theta_change=iSetTimer(10,thetaChange);
+
+	timer_theta_change=iSetTimer(10,thetaChange);
     timer_ball_move=iSetTimer(30,ballMove);
     timer_speedometer_change=iSetTimer(10,VelocityBar);
+
 	iSetTimer(20, rectangle_change_1);
 	
 	iStart(); // it will start drawing

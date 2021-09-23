@@ -39,27 +39,26 @@ void rectangle_change_1(){
 	{
 		
 	case 1 :	obstacle_math_y += speed;
-				if (obstacle_math_y +60 > frame_height || obstacle_math_y -10< 0 ) 
+				if (obstacle_math_y +60 > frame_height || obstacle_math_y -10 < 0 ) 
 				{
 					speed = -speed;
-					game_point+=1;
+		
 					
 				} 
 				break;
 
 	case 2 :	obstacle_eee_y += speed;
-				if (obstacle_eee_y +60 > frame_height || obstacle_eee_y -10 < 0 ) 
+				if (obstacle_eee_y +60 > frame_height || obstacle_eee_y -10  < 0 ) 
 				{
 					speed = -speed;
-					game_point+=1;
+					
 				} 
 				break;
 	
 	case 3 :	obstacle_cse1205_y += speed;
-				if (obstacle_cse1205_y +60 > frame_height || obstacle_cse1205_y -10 < 0 ) 
+				if (obstacle_cse1205_y +60 > frame_height || obstacle_cse1205_y -10  < 0 ) 
 				{
 					speed = -speed;
-					game_point+=1;
 				} 
 				break;
 	
@@ -67,15 +66,15 @@ void rectangle_change_1(){
 				if (obstacle_cse1203_y +60 > frame_height || obstacle_cse1203_y -10 < 0 ) 
 				{
 					speed = -speed;
-					game_point+=1;
+					
 				} 
 				break;
 
 	case 5:   	obstacle_me_y += speed;
-				if (obstacle_me_y +60 > frame_height || obstacle_me_y -10 < 0) 
+				if (obstacle_me_y +60 > frame_height || obstacle_me_y -10 < 0 ) 
 				{
 					speed = -speed;
-					game_point+=1;
+					
 				} 
 				break;
 

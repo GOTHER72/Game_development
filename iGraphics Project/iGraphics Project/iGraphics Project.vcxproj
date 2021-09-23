@@ -66,6 +66,7 @@
     <ClInclude Include="glut.h" />
     <ClInclude Include="iGraphics.h" />
     <ClInclude Include="obstacle_move.h" />
+    <ClInclude Include="screen_change.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>

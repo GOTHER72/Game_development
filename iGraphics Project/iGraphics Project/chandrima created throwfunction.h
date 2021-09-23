@@ -109,7 +109,6 @@ void ballMove()						//ball moving function
 		t++;
 	
 		printf("\nTh X = %lf  Th Y = %lf\n", throw_object_X,throw_object_Y);
-	
 
 		if(throw_object_X + 20>=560 && throw_object_Y+10>=obstacle_me_y&&throw_object_Y+10<=obstacle_me_y+50)
 		{
@@ -121,7 +120,7 @@ void ballMove()						//ball moving function
 
 			t=1;th=0;
 
-
+			book_state = 1;
 			iResumeTimer(timer_speedometer_change);
 			speedometer_X=25,speedometer_Y=100;
 
@@ -137,7 +136,7 @@ void ballMove()						//ball moving function
 
 			t=1;th=0;
 
-
+			book_state = 1;
 			iResumeTimer(timer_speedometer_change);
 			speedometer_X=25,speedometer_Y=100;
 
@@ -153,7 +152,7 @@ void ballMove()						//ball moving function
 
 			t=1;th=0;
 
-
+			book_state = 1;
 			iResumeTimer(timer_speedometer_change);
 			speedometer_X=25,speedometer_Y=100;
 
@@ -169,7 +168,7 @@ void ballMove()						//ball moving function
 
 			t=1;th=0;
 
-
+			book_state = 1;
 			iResumeTimer(timer_speedometer_change);
 			speedometer_X=25,speedometer_Y=100;
 
@@ -185,24 +184,22 @@ void ballMove()						//ball moving function
 
 			t=1;th=0;
 
-
+			book_state = 1;
 			iResumeTimer(timer_speedometer_change);
 			speedometer_X=25,speedometer_Y=100;
 
 			player=true,angle_set_throw=true;
 		}
-		if(throw_object_X + 20<=1000 && throw_object_X +20>=935 && throw_object_Y+10<=384 && throw_object_Y +10>=336)   ////Target
+		if(throw_object_X + 20<= 1000 && throw_object_X +20>=935 && throw_object_Y+10<=384 && throw_object_Y +10>=336)   ////Target
 		{
 			printf("\nTARGET IF\n");
 			printf("Yoo Worked out!!");
 			throw_object_X=142;
 			throw_object_Y=158;
 			throw_ball=false;
-			
-
 			t=1;th=0;
-
-
+			game_point+=1;
+			book_state = 1;
 			iResumeTimer(timer_speedometer_change);
 			speedometer_X=25,speedometer_Y=100;
 
@@ -210,6 +207,8 @@ void ballMove()						//ball moving function
 
 		}
 
+
+		
 
 		if(throw_object_Y<=0||throw_object_X>1000||throw_object_Y>=610)
 		{
@@ -217,14 +216,14 @@ void ballMove()						//ball moving function
 			throw_object_X=142;
 			throw_object_Y=158;
 			throw_ball=false;
-			
-
+		
 			t=1;th=0;
-
+			book_state = 1;
 			iResumeTimer(timer_speedometer_change);
 			speedometer_X=25,speedometer_Y=100;
 			player=true,angle_set_throw=true;
 		}
+
 	}
 
 }
@@ -334,9 +333,12 @@ void  ball_throw_command(unsigned char key)
 		{
 			if (key == ' ')
 			{
+				
 				throw_ball=true;
 
-				//iPauseTimer(timer_rectangle_change_1);
+		
+				
+					
 				printf("%d\n",left_chances);
 				left_chances--;
 				if(left_chances == 0 )
@@ -350,6 +352,8 @@ void  ball_throw_command(unsigned char key)
 		{
 			if (key == ' ')
 			angle_set_throw=false;
+		
+
 		}
 	}
 
