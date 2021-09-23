@@ -33,6 +33,9 @@
     <ClInclude Include="chandrima created throwfunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="obstacle_move.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="merge_throw_move.cpp">

@@ -299,11 +299,10 @@ int main()
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	image_load();
     iSetTimer(200,menuLoad);
-    iSetTimer(10,thetaChange);	
-    iSetTimer(30,ballMove);	
-	iSetTimer(10,VelocityBar);
+    timer_theta_change=iSetTimer(10,thetaChange);
+    timer_ball_move=iSetTimer(30,ballMove);
+    timer_speedometer_change=iSetTimer(10,VelocityBar);
 	iSetTimer(20, rectangle_change_1);
-	
 	
 	iStart(); // it will start drawing
 

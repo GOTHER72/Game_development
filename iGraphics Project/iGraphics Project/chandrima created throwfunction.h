@@ -109,8 +109,88 @@ void ballMove()						//ball moving function
 		t++;
 	
 		printf("\nTh X = %lf  Th Y = %lf\n", throw_object_X,throw_object_Y);
+	
+
+		if(throw_object_X + 20>=560 && throw_object_Y+10>=obstacle_me_y&&throw_object_Y+10<=obstacle_me_y+50)
+		{
+			printf("ME");
+			throw_object_X=142;
+			throw_object_Y=158;
+			throw_ball=false;
+			
+
+			t=1;th=0;
 
 
+			iResumeTimer(timer_speedometer_change);
+			speedometer_X=25,speedometer_Y=100;
+
+			player=true,angle_set_throw=true;
+		}
+		if(throw_object_X + 20>=620 && throw_object_Y+10>=obstacle_cse1203_y&&throw_object_Y+10<=obstacle_cse1203_y+50)
+		{
+			printf("cse");
+			throw_object_X=142;
+			throw_object_Y=158;
+			throw_ball=false;
+			
+
+			t=1;th=0;
+
+
+			iResumeTimer(timer_speedometer_change);
+			speedometer_X=25,speedometer_Y=100;
+
+			player=true,angle_set_throw=true;
+		}
+			if(throw_object_X + 20>=680 && throw_object_Y+10>=obstacle_cse1205_y&&throw_object_Y+10<=obstacle_cse1205_y+50)
+		{
+			printf("cse");
+			throw_object_X=142;
+			throw_object_Y=158;
+			throw_ball=false;
+			
+
+			t=1;th=0;
+
+
+			iResumeTimer(timer_speedometer_change);
+			speedometer_X=25,speedometer_Y=100;
+
+			player=true,angle_set_throw=true;
+		}
+			if(throw_object_X + 20>=740 && throw_object_Y+10>=obstacle_eee_y&&throw_object_Y+10<=obstacle_eee_y+50)
+		{
+			printf("eee");
+			throw_object_X=142;
+			throw_object_Y=158;
+			throw_ball=false;
+			
+
+			t=1;th=0;
+
+
+			iResumeTimer(timer_speedometer_change);
+			speedometer_X=25,speedometer_Y=100;
+
+			player=true,angle_set_throw=true;
+		}
+			if(throw_object_X + 20>=800 && throw_object_Y+10>=obstacle_math_y&&throw_object_Y+10<=obstacle_math_y+50)
+		{
+			printf("math");
+			throw_object_X=142;
+			throw_object_Y=158;
+			throw_ball=false;
+			
+
+			t=1;th=0;
+
+
+			iResumeTimer(timer_speedometer_change);
+			speedometer_X=25,speedometer_Y=100;
+
+			player=true,angle_set_throw=true;
+		}
 		if(throw_object_X + 20<=1000 && throw_object_X +20>=935 && throw_object_Y+10<=384 && throw_object_Y +10>=336)   ////Target
 		{
 			printf("\nTARGET IF\n");
@@ -185,7 +265,7 @@ void velocityControl()										//velocity bar with different colours for ball t
 	iFilledRectangle(25,205,60,25);
 
 	iSetColor(255,255,255);
-	iFilledRectangle(speedometer_X,speedometer_Y,60,25);			//white rectangle up down at velocity bar
+	iFilledRectangle(speedometer_X,speedometer_Y,60,15);			//white rectangle up down at velocity bar
 }
 
 
@@ -205,37 +285,37 @@ void VelocityBar()								///in this function white rectangle goes up and down a
 		iPauseTimer(timer_speedometer_change);
 		if(speedometer_Y>=100 && speedometer_Y<=115)
 		{
-			velocity=velocity-5;
+			velocity=5;
 		}if(speedometer_Y>=116 && speedometer_Y<=125)
 		{
-			velocity=velocity-4;
+			velocity=7;
 		}if(speedometer_Y>=126 && speedometer_Y<=135)
 		{
-			velocity=velocity-3;
+			velocity=9;
 		}if(speedometer_Y>=136 && speedometer_Y<=145)
 		{
-			velocity=velocity-2;
+			velocity=11;
 		}if(speedometer_Y>=146 && speedometer_Y<=155)
 		{
-			velocity=velocity-1;
+			velocity=13;
 		}if(speedometer_Y>=156 && speedometer_Y<=165)
 		{
-			velocity=velocity-0;
+			velocity=15;
 		}if(speedometer_Y>=166 && speedometer_Y<=175)
 		{
-			velocity=velocity+1;
+			velocity=17;
 		}if(speedometer_Y>=176 && speedometer_Y<=185)
 		{
-			velocity=velocity+2;
+			velocity=19;
 		}if(speedometer_Y>=186 && speedometer_Y<=195)
 		{
-			velocity=velocity+3;
+			velocity=21;
 		}if(speedometer_Y>=196 && speedometer_Y<=205)
 		{
-			velocity=velocity+4;
+			velocity=23;
 		}if(speedometer_Y>=206 && speedometer_Y<=215)
 		{
-			velocity=velocity+5;
+			velocity=25;
 		}
 
 		printf(" velocity = %d\n",velocity);
@@ -256,8 +336,7 @@ void  ball_throw_command(unsigned char key)
 			{
 				throw_ball=true;
 
-				tarar_matha == true;
-				
+				//iPauseTimer(timer_rectangle_change_1);
 				printf("%d\n",left_chances);
 				left_chances--;
 				if(left_chances == 0 )
