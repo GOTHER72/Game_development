@@ -9,6 +9,8 @@ using namespace std;
 int *delete_duplicate_element(int*);
 int *sort_decreasing_order(int*);
 
+int appender_flag = 1;
+
 int point_array[20];
 int *point_array_modified;
 
@@ -129,8 +131,8 @@ void highest_score_printer(){ //this function will print the highest score in a 
                     {
                          if (point_array_modified[i] == details[j].point)
                             {
-                              printf("%s %s\n",string_details[j].name,details[j].name);
-         			            printf("%s %d\n",string_details[j].point,details[j].point);
+                              // printf("%s %s\n",string_details[j].name,details[j].name);
+         			            // printf("%s %d\n",string_details[j].point,details[j].point);
 
                               fprintf(fp,"%s %s\n",string_details[j].name,details[j].name);
          			            fprintf(fp,"%s %d\n",string_details[j].point,details[j].point);
@@ -144,7 +146,7 @@ void highest_score_printer(){ //this function will print the highest score in a 
    }
 }
 
-void user_data_appender(int point)
+void user_point_appender(int point)
 {
 
    FILE *fp = fopen (FILENAME,"a");
@@ -153,8 +155,21 @@ void user_data_appender(int point)
 
    else
    {
-      fprintf(fp,"\nName \n");
-      fprintf(fp,"Point %d",point);
+     fprintf(fp,"\nPoint %d",point);
+   }
+}
+void user_name_appender()
+{
+
+   FILE *fp = fopen (FILENAME,"a");
+
+   if(fp==NULL)  printf("File \"%s\" does not exist!!!\n",FILENAME2);
+
+   else
+   {
+       fprintf(fp,"\nName %s",details[total_user+1].name);
+      
+   
    }
 }
 

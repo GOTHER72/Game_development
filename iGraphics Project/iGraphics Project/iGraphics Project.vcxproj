@@ -60,18 +60,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="girl.bmp" />
-    <None Include="smurf.bmp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="bitmap_loader.h" />
+    <ClInclude Include="chandrima created throwfunction.h" />
     <ClInclude Include="glaux.h" />
     <ClInclude Include="glut.h" />
     <ClInclude Include="iGraphics.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LIFE%40AUST.cpp" />
+    <ClCompile Include="merge_throw_move.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

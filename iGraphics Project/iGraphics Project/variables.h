@@ -1,8 +1,5 @@
-int loadx;
-
-
-
 int play_button,control_button,story_button,about,exit_button;
+int loadx;
 
 int screen_play,screen_highscore,screen_control,screen_member,screen_story;
 
@@ -28,7 +25,7 @@ int rect_x1, rect_y1;
 int rect_x, rect_y;
 int rect_dx, rect_dy;
 
-int r=253,g=210,b=191;
+//int r=253,g=210,b=191;
 int r1=255, g1=107, b1=107;
 int r2=69,  g2=82,  b2=108;
 int r3=255, g3=107, b3=107;

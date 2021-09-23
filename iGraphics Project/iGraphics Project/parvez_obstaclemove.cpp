@@ -1,7 +1,7 @@
 /*Created by 
 Parvez Ahammed - 200104129 
 Tabassum Tara lamia - 200104128
-Chandrima sareker shipra 200104131 */
+Chandrima sarker shipra 200104131 */
 
 /**================================================================================================
  *!                                       Must needed header files
@@ -20,7 +20,6 @@ Chandrima sareker shipra 200104131 */
 #include "menu.h"
 #include "file_handler.h"
 #include "obstacle_move.h"
-
 
 /**================================================================================================
  *!                                        Function created by the developers
@@ -72,7 +71,6 @@ void iDraw()
 		        menu();
 	        }
 	    goToMenuOptions();	   //calling goToMenuOptions
-
     }
     if (screen == 2)
 	{
@@ -86,10 +84,9 @@ void iDraw()
     if (screen == 7)  
     {
                 iShowImage(0,0,1000,610,screen_level_1);
-				
 				show_obstacle_image();	
    				changable_text();
-				  // rectangle_change_1();
+
 
     }  
     if (screen == 8)     iShowImage(0,0,1000,610,screen_resume_game);
@@ -161,7 +158,7 @@ void iMouse(int button, int state, int mx, int my)
 		if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
 		{
 		//place your codes here
-        user_data_appender(game_point);
+        //user_data_appender(game_point);
 		iPauseTimer(0);
 		}
 		
@@ -177,8 +174,9 @@ void iKeyboard(unsigned char key)
 			mode = 3;
 			screen = 7;
 
-			strcpy(details[19].name, player_name);
-			printf("%s\n", details[19].name);
+			strcpy(details[total_user+1].name, player_name);
+			printf("%s\n", details[total_user+1].name);
+			user_name_appender();
 
 			for(int i = 0; i < length; i++)
 				player_name[i] = 0;
@@ -190,10 +188,21 @@ void iKeyboard(unsigned char key)
 			length++;
 		}
 	}
+
+	if (key == 'p' && screen == 7 ) 
+	{
+			book_state =0;
+	}
+	if (key == 'r' && screen == 7 && book_state == 0) book_state = 1;
+
+	if ( key == 's' && screen == 7 && book_state == 1 ) user_point_appender(game_point);
+	
+
 	
 	if(key == 'x')
 	{
 		//do something with 'x'
+		user_point_appender(game_point);
 		exit(0);
 	}
 
@@ -215,7 +224,7 @@ void file_handler()
 	printf("File line %d\nTotal User %d\n",total_lines,total_user);
 	file_scanner();
 
-	point_array_modified = sort_decreasing_order(delete_duplicate_element(point_array));
+	point_array_modified = sort_decreasing_order( delete_duplicate_element(point_array) );
 
 	highest_score_printer();
 
@@ -245,12 +254,12 @@ void image_load()
 
     obstacle_bamboo = iLoadImage("images//bamboo.png");
 
-	screen_member_light = iLoadImage("images//screen_member_light.png");
-	screen_control_light = iLoadImage("images//screen_control_light.png");
-	screen_story_light = iLoadImage("images//screen_story_light.png");
+	screen_member_light    = iLoadImage("images//screen_member_light.png");
+	screen_control_light   = iLoadImage("images//screen_control_light.png");
+	screen_story_light     = iLoadImage("images//screen_story_light.png");
 	screen_highscore_light = iLoadImage("images//screen_highscore_light.png");
-	screen_play_light = iLoadImage("images//screen_play_light.png");
-	joystick_light = iLoadImage("images//joystick_light.png");
+	screen_play_light      = iLoadImage("images//screen_play_light.png");
+	joystick_light         = iLoadImage("images//joystick_light.png");
 
 	obstacle_cse_1203  = iLoadImage("images//cse_1203.png");
 	obstacle_cse_1205  = iLoadImage("images//cse_1205.png");
@@ -263,13 +272,14 @@ void image_load()
 int main()
 {
 	newGame();
+	file_handler();
 
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	image_load();
     iSetTimer(200,menuLoad);
 	iSetTimer(20, rectangle_change_1);
 	
-	file_handler();
+	
 	iStart(); // it will start drawing
 
 	return 0;

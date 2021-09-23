@@ -15,14 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="girl.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="smurf.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="iGraphics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -38,9 +30,12 @@
     <ClInclude Include="stb_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="chandrima created throwfunction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="LIFE%40AUST.cpp">
+    <ClCompile Include="merge_throw_move.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

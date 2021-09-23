@@ -7,7 +7,9 @@
 #include "file_handler.h"
 
 #include "variables.h"
+
 #include "screen_change.h"
+#include "obstacle_move.h"
 
 
 void show_obstacle_image();
