@@ -17,7 +17,5 @@ name saurav
 point 16
 name tanvir
 point 12
-name adil
-point 8
-Name parvez
-Name 0
+Name p
+Point 0
