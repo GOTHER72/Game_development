@@ -6,8 +6,8 @@ Chandrima sarker shipra 200104131 */
 /**================================================================================================
  *!                                       Must needed header files
  *================================================================================================**/
-# include "iGraphics.h"
-#include "bitmap_loader.h"
+# include "headers//iGraphics.h"
+#include "headers//bitmap_loader.h"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,18 +15,17 @@ Chandrima sarker shipra 200104131 */
 /**================================================================================================
  *!                                 Header files created by the developers
  *================================================================================================**/
-#include "variables.h"
-#include "screen_change.h"
-#include "menu.h"
-#include "file_handler.h"
-#include "obstacle_move.h"
-#include "throwfunction.h"
+#include "headers//variables.h"
+#include "headers//screen_change.h"
+#include "headers//menu.h"
+#include "headers//file_handler.h"
+#include "headers//obstacle_move.h"
+#include "headers//throwfunction.h"
 
 
 /**================================================================================================
  *!                                        Function created by the developers
  *================================================================================================**/
-// void collisionCheck();
 void screen_change(int,int);
 void screen_show(int);
 void menu();
@@ -249,7 +248,7 @@ void file_handler()
 	//printf("File line %d\nTotal User %d\n",total_lines,total_user);
 	file_scanner();
 
-	point_array_modified = sort_decreasing_order( delete_duplicate_element(point_array) );
+	point_array_modified = sort_decreasing_order(point_array);
 	highest_score_printer();
 }
 
