@@ -18,4 +18,6 @@ point 16
 name tanvir
 point 12
 Name p
+Point 3
+Name p
 Point 0

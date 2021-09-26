@@ -1,5 +1,5 @@
-/*Created by 
-Parvez Ahammed - 200104129 
+/*Created by
+Parvez Ahammed - 200104129
 Tabassum Tara lamia - 200104128
 Chandrima sarker shipra 200104131 */
 
@@ -21,6 +21,7 @@ Chandrima sarker shipra 200104131 */
 #include "file_handler.h"
 #include "obstacle_move.h"
 #include "throwfunction.h"
+
 
 /**================================================================================================
  *!                                        Function created by the developers
@@ -80,49 +81,51 @@ void iDraw()
 	{
 		 	iShowImage(0,0,1000,610,screen_highscore);
 		 	high_score_shower();
-	}    
-    if (screen == 3)    iShowImage(0,0,1000,610,screen_play); 
+	}
+    if (screen == 3)    iShowImage(0,0,1000,610,screen_play);
     if (screen == 4)    iShowImage(0,0,1000,610,screen_member);
     if (screen == 5)    iShowImage(0,0,1000,610,screen_story);
     if (screen == 6)    iShowImage(0,0,1000,610,screen_control);
-    if (screen == 7)  
+    if (screen == 7)
     {
                 iShowImage(0,0,1000,610,screen_level_1);
-				show_obstacle_image();	
+				show_obstacle_image();
    				changable_text();
                 screen_level_1_throw();  //! theres a issue here
-    }  
+    }
     if (screen == 8)     iShowImage(0,0,1000,610,screen_resume_game);
 	if (screen == 9)     iShowImage(0,0,1000,610,screen_member_light);
 	if (screen == 10)    iShowImage(0,0,1000,610,screen_control_light);
 	if (screen == 11)    iShowImage(0,0,1000,610,screen_story_light);
 	if (screen == 12)    iShowImage(0,0,1000,610,screen_highscore_light);
 	if (screen == 13)    iShowImage(0,0,1000,610,screen_play_light);
-	if (screen == 14)    
+	if (screen == 14)
 		{
 			iShowImage(0,0,1000,610,joystick_light);
 	}
 
-	if (screen == 15) 
+	if (screen == 15)
 	{
 		iShowImage(0,0,1000,610,screen_input);
-		
+
 		if(mode == 1) {
 		iSetColor(255, 255, 255);
 		iText(300, 300, player_name,GLUT_BITMAP_TIMES_ROMAN_24);
 		}
-	} 
+	}
 
 	if (screen == 16 ) iShowImage(0,0,screen_width,screen_height,screen_game_over);
 	if (screen == 17 ) iShowImage(0,0,screen_width,screen_height,screen_go_level_2);
-	if (screen == 18 ) 
+	if (screen == 18 )
 	{
 		iShowImage(0,0,screen_width,screen_height,screen_level_2);
-		show_obstacle_image();	
+		book_state=1;
+		show_obstacle_image();
    		changable_text();
+        screen_level_1_throw();
 	}
-	
-	
+
+
 
 }
 
@@ -154,7 +157,7 @@ void iMouseMove(int mx, int my)
 
 void iPassiveMouse(int mx, int my)
 {
-	
+
 
 	if(monkey_gayeb==true || screen == 14 )
 	{
@@ -168,7 +171,7 @@ void iMouse(int button, int state, int mx, int my)
 		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
 		{
 		    printf("x= %d\ty= %d\t screen = %d\n", mx,my,screen);
-            screen_change(mx,my);       
+            screen_change(mx,my);
         }
 
 		if(button == GLUT_RIGHT_BUTTON && state == GLUT_DOWN)
@@ -178,7 +181,7 @@ void iMouse(int button, int state, int mx, int my)
 		printf("x= %d\ty= %d\t screen = %d\n", mx,my,screen);
 		iPauseTimer(0);
 		}
-		
+
 }
 
 void iKeyboard(unsigned char key)
@@ -206,7 +209,7 @@ void iKeyboard(unsigned char key)
 		}
 	}
 
-	if (key == 'p' && screen == 7 ) 
+	if (key == 'p' && screen == 7 )
 	{
 			book_state =0;
 	}
@@ -218,9 +221,9 @@ void iKeyboard(unsigned char key)
 	{
 		ball_throw_command(key);
 	}
-	
 
-	
+
+
 	if(key == 'x')
 	{
 		//do something with 'x'
@@ -230,7 +233,7 @@ void iKeyboard(unsigned char key)
 
 }
 
-void iSpecialKeyboard(unsigned char key)  //special key that will end the game 
+void iSpecialKeyboard(unsigned char key)  //special key that will end the game
 {
 
 	if (key == GLUT_KEY_END)
@@ -255,8 +258,8 @@ void image_load()
 {
     screen= iLoadImage("images//screen_load.png");
 	play_button      = iLoadImage("images//btn_play.png");  //loading the images
-	menu_picture     = iLoadImage("images//joystick.png"); 
-	high_score       = iLoadImage("images//btn_high_score.png"); 
+	menu_picture     = iLoadImage("images//joystick.png");
+	high_score       = iLoadImage("images//btn_high_score.png");
 	control_button   = iLoadImage("images//btn_control.png");
 	story_button     = iLoadImage("images//btn_story.png");
 	about            = iLoadImage("images//btn_about.png");
@@ -300,6 +303,7 @@ int main()
 
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	image_load();
+	throw_brain= iLoadImage("images//object_throw.png");
     iSetTimer(200,menuLoad);
 
 	timer_theta_change=iSetTimer(10,thetaChange);
@@ -307,7 +311,7 @@ int main()
     timer_speedometer_change=iSetTimer(10,VelocityBar);
 
 	iSetTimer(20, rectangle_change_1);
-	
+
 	iStart(); // it will start drawing
 
 	return 0;
