@@ -119,6 +119,8 @@ void iDraw()
 	if (screen == 15)
 	{
 		iShowImage(0,0,1000,610,screen_input);
+		left_chances = 10;
+		game_point = 0;
 
 		if(mode == 1) {
 		iSetColor(255, 255, 255);

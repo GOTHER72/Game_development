@@ -56,3 +56,6 @@ Name adas]\
 Name asme
 Name pame
 Name pame
+Name player
+Name player
+Point 30
