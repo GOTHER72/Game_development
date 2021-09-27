@@ -3,8 +3,8 @@ using namespace std;
 
 #include <string.h>
 
-#define FILENAME "player_data.txt"
-#define FILENAME2 "high_score.txt"
+#define FILENAME "files//player_data.txt"
+#define FILENAME2 "files//high_score.txt"
 
 int *delete_duplicate_element(int*);
 int *sort_decreasing_order(int*);
@@ -186,7 +186,7 @@ void high_score_shower(){
 	for (int i = 0 ; i < 7 ; i++)
 	{
 
-      iSetColor(255,255,255);
+      //iSetColor(255,255,255);
 		std::sprintf(serial_char, "%d", i+1);
 		iText(230, high_score_y, serial_char,GLUT_BITMAP_TIMES_ROMAN_24); // for the serial of the high scorer
 

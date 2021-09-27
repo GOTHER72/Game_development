@@ -242,7 +242,7 @@ void ballMove()						//ball moving function
 		if(return_time==1)
 		t--;
 
-		printf("\nTh X = %lf  Th Y = %lf\n", throw_object_X,throw_object_Y);
+		//printf("\nTh X = %lf  Th Y = %lf\n", throw_object_X,throw_object_Y);
 
 		if(throw_object_X + 50>=560 && throw_object_X + 50<=610 &&  throw_object_Y+50>=obstacle_me_y && throw_object_Y+50<=obstacle_me_y+50)
 		{

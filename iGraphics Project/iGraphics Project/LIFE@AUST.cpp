@@ -79,6 +79,7 @@ void iDraw()
     if (screen == 2)
 	{
 		 	iShowImage(0,0,1000,610,screen_highscore);
+			 iSetColor(255,255,255);
 		 	high_score_shower();
 	}
     if (screen == 3)    iShowImage(0,0,1000,610,screen_play);
@@ -96,7 +97,13 @@ void iDraw()
 	if (screen == 9)     iShowImage(0,0,1000,610,screen_member_light);
 	if (screen == 10)    iShowImage(0,0,1000,610,screen_control_light);
 	if (screen == 11)    iShowImage(0,0,1000,610,screen_story_light);
-	if (screen == 12)    iShowImage(0,0,1000,610,screen_highscore_light);
+	if (screen == 12)
+	{
+		iShowImage(0,0,1000,610,screen_highscore_light);
+		iSetColor(67,77,111);
+		high_score_shower();
+		
+	}    
 	if (screen == 13)    iShowImage(0,0,1000,610,screen_play_light);
 	if (screen == 14)
 		{
