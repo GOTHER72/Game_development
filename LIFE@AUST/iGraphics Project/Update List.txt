@@ -1,0 +1,22 @@
+Update version 2.0
+
+-- Highest scorer list shown in descending order
+-- Bug fixes in the menu while screen changing
+-- User name input taken 
+-- User data (name,point) saved in file for further User
+-- Perfected the speedometer 
+-- Added direction controller of the throwable object
+-- Thrown the object in maintaining projectile motion implemented laws of physics
+-- Added sound effect where needed
+-- Made a collision controller 
+-- Proceeded to level 2
+-- Added retry and resume function
+
+Bugs to solve In Version 3.0
+-- make the level 2 playable 
+-- save the point of the previous level when going to next level
+-- Save the resume state in file in case the user leaves the game
+-- proceed to level 3
+-- create the character that throws objects
+-- Move the villain character
+
