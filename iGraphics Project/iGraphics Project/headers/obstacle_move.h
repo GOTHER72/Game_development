@@ -3,6 +3,7 @@
  *================================================================================================**/
 
 int obstacle_cse_1203,obstacle_cse_1205,obstacle_eee_1241,obstacle_me_1211,obstacle_math_1219;
+int obstacle_cse_2103,obstacle_cse_2106,obstacle_eee_2141,obstacle_hum_2109,obstacle_math_2101;
 int obstacle_cse1203_y =10, obstacle_cse1205_y =10 ,obstacle_eee_y =10 , obstacle_me_y =10 ,obstacle_math_y =10 ;
 int obstacle_new  ;
 

@@ -1,5 +1,5 @@
 int th=0;
-int left_chances=9;
+int left_chances=10;
 int target,object_throwable;
 double theta=(th*3.1416)/180;
 int return_time=0;
@@ -213,7 +213,7 @@ void  ball_throw_command(unsigned char key)
 						throw_ball=false;
 					}
 
-					left_chances = 9;
+					left_chances = 10;
 					game_point = 0;
 				}
 

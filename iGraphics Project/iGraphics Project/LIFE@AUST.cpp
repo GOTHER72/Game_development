@@ -39,6 +39,7 @@ void file_handler();
 void newGame();
 void changable_text();
 void show_obstacle_image();
+void show_obstacle_image_2();
 
 
 int screen_game_over;
@@ -126,7 +127,7 @@ void iDraw()
 	{
 		iShowImage(0,0,screen_width,screen_height,screen_level_2);
 		book_state=1;
-		show_obstacle_image();
+		show_obstacle_image_2();
    		changable_text();
         screen_level_1_throw();
 	}
@@ -145,12 +146,23 @@ void  show_obstacle_image()
 
 }
 
+
+void  show_obstacle_image_2()
+{
+	iShowImage(560,obstacle_me_y,50,50,obstacle_cse_2103);
+    iShowImage(620,obstacle_cse1203_y,50,50,obstacle_cse_2106);
+	iShowImage(680,obstacle_cse1205_y,50,50,obstacle_eee_2141);
+    iShowImage(740,obstacle_eee_y,50,50,obstacle_hum_2109);
+	iShowImage(800,obstacle_math_y,50,50,obstacle_math_2101);
+
+}
+
 void changable_text(){
 
 	std::sprintf(game_point_char, "%d", game_point);
     iText(106, 495, game_point_char,GLUT_BITMAP_TIMES_ROMAN_24);
 
-	std::sprintf(left_chances_char, "%d", left_chances);
+	std::sprintf(left_chances_char, "%d", left_chances-1);
     iText(270, 495, left_chances_char,GLUT_BITMAP_TIMES_ROMAN_24);
 
 }
@@ -294,6 +306,14 @@ void image_load()
 	obstacle_eee_1241  = iLoadImage("images//eee_1241.png");
 	obstacle_me_1211   = iLoadImage("images//me_1211.png");
 	obstacle_math_1219 = iLoadImage("images//math_1219.png");
+
+	
+
+	obstacle_cse_2103  = iLoadImage("images//cse_2103.png");
+	obstacle_cse_2106  = iLoadImage("images//cse_2106.png");
+	obstacle_eee_2141  = iLoadImage("images//eee_2141.png");
+	obstacle_hum_2109   = iLoadImage("images//hum_2109.png");
+	obstacle_math_2101 = iLoadImage("images//math_2101.png");
 
 	screen_game_over = iLoadImage("images//screen_game_over.png");
 	screen_go_level_2 = iLoadImage("images//screen_go_level_2.png");
