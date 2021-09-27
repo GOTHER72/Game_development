@@ -107,3 +107,8 @@ int speedometer_X=25,speedometer_Y=100;
 bool player=true,throw_ball=false,angle_set_throw=true;
 
 
+/**======================
+ *!    Moveable text 
+ *========================**/
+
+int instruction_move_flag =1,instruction_move_x = 1000 , instruction_move_dx = 5;

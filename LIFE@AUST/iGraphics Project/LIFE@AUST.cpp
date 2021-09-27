@@ -23,6 +23,7 @@ Chandrima sarker shipra 200104131 */
 #include "headers//throwfunction.h"
 #include "headers//screen_change.h"
 #include "headers//menu.h"
+#include "headers//text_manager.h"
 
 
 
@@ -45,6 +46,7 @@ void newGame();
 void changable_text();
 void show_obstacle_image();
 void show_obstacle_image_2();
+void instruction_move();
 
 
 int screen_game_over;
@@ -97,7 +99,8 @@ void iDraw()
                 iShowImage(0,0,1000,610,screen_level_1);
 				show_obstacle_image();
    				changable_text();
-                screen_level_1_throw();  //! theres a issue here
+                screen_level_1_throw(); 
+				instruction_move();
     }
     if (screen == 8)     iShowImage(0,0,1000,610,screen_resume_game);
 	if (screen == 9)     iShowImage(0,0,1000,610,screen_member_light);
@@ -137,6 +140,7 @@ void iDraw()
 		show_obstacle_image_2();
    		changable_text();
         screen_level_1_throw();
+		instruction_move();
 	}
 
 }
@@ -162,15 +166,6 @@ void  show_obstacle_image_2()
 
 }
 
-void changable_text(){
-
-	std::sprintf(game_point_char, "%d", game_point);
-    iText(106, 495, game_point_char,GLUT_BITMAP_TIMES_ROMAN_24);
-
-	std::sprintf(left_chances_char, "%d", left_chances-1);
-    iText(270, 495, left_chances_char,GLUT_BITMAP_TIMES_ROMAN_24);
-
-}
 
 void iMouseMove(int mx, int my)
 {
@@ -180,7 +175,7 @@ void iMouseMove(int mx, int my)
 
 void iPassiveMouse(int mx, int my)
 {
-	printf("x= %d\ty= %d\t screen = %d\n", mx,my,screen);
+	//printf("x= %d\ty= %d\t screen = %d\n", mx,my,screen);
 
 	if(monkey_gayeb==true || screen == 14 )
 	{
@@ -337,6 +332,7 @@ int main()
 	throw_brain= iLoadImage("images//object_throw.png");
     iSetTimer(200,menuLoad);
 
+	iSetTimer(20 ,instructions_text_move);
 	timer_theta_change=iSetTimer(10,thetaChange);
     timer_ball_move=iSetTimer(30,ballMove);
     timer_speedometer_change=iSetTimer(10,VelocityBar);
