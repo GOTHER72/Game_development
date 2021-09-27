@@ -1,8 +1,4 @@
 
-// int screen =1;
-// int mode;
-
-
 void screen_change(int mx,int my)
 {   
     int mouse_distance_from_center ; // as we are considering circle finding out the distance of mouse cursor from each circle center

@@ -110,7 +110,7 @@ int *delete_duplicate_element(int *array){  //will delete the duplicate element 
             }
         }
     }
-    
+
     return array ;
 
 }

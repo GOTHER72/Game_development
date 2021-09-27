@@ -139,8 +139,6 @@ void iDraw()
         screen_level_1_throw();
 	}
 
-
-
 }
 
 void  show_obstacle_image()
@@ -182,7 +180,7 @@ void iMouseMove(int mx, int my)
 
 void iPassiveMouse(int mx, int my)
 {
-
+	printf("x= %d\ty= %d\t screen = %d\n", mx,my,screen);
 
 	if(monkey_gayeb==true || screen == 14 )
 	{
@@ -274,7 +272,7 @@ void file_handler()
 	//printf("File line %d\nTotal User %d\n",total_lines,total_user);
 	file_scanner();
 
-	point_array_modified = sort_decreasing_order(point_array);
+	point_array_modified = sort_decreasing_order(delete_duplicate_element(point_array));
 	highest_score_printer();
 }
 
@@ -299,7 +297,7 @@ void image_load()
     screen_resume_game   = iLoadImage("images//screen_resume.png");
 	screen_input       = iLoadImage("images//screen_input.png");
 
-    obstacle_bamboo = iLoadImage("images//bamboo.png");
+    obstacle_bamboo    = iLoadImage("images//bamboo.png");
 
 	screen_member_light    = iLoadImage("images//screen_member_light.png");
 	screen_control_light   = iLoadImage("images//screen_control_light.png");
@@ -344,8 +342,6 @@ int main()
     timer_speedometer_change=iSetTimer(10,VelocityBar);
 
 	timer_obstacle_change = iSetTimer(20, rectangle_change_1);
-
-	
 
 	iStart(); // it will start drawing
 
