@@ -341,7 +341,9 @@ int main()
     timer_ball_move=iSetTimer(30,ballMove);
     timer_speedometer_change=iSetTimer(10,VelocityBar);
 
-	iSetTimer(20, rectangle_change_1);
+	timer_obstacle_change = iSetTimer(20, rectangle_change_1);
+
+	
 
 	iStart(); // it will start drawing
 

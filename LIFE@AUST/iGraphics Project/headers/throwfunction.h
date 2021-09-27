@@ -260,7 +260,7 @@ void ballMove()						//ball moving function
 			return_time=1;
 			sound = 1;
 		}
-		if(throw_object_X + 50<= 1000 && throw_object_X +50>=870 && throw_object_Y+50<=390 && throw_object_Y +50>=230)   ////Target
+		if(throw_object_X + 50<= 1000 && throw_object_X +50>=868 && throw_object_Y+50<=415 && throw_object_Y +50>=198)   ////Target
 		{
 			PlaySound("music\\cg4.wav",NULL,SND_ASYNC);
 			//printf("\nTARGET IF\n");

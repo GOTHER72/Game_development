@@ -84,7 +84,7 @@ int left_chances=10;
 int target,object_throwable;
 double theta=(th*3.1416)/180;
 int return_time=0;
-int timer_theta_change,timer_ball_move,timer_speedometer_change;
+int timer_theta_change,timer_ball_move,timer_speedometer_change,timer_obstacle_change;
 double throw_object_X=142,throw_object_Y=158;
 int sound = 0;
 int line=100;
