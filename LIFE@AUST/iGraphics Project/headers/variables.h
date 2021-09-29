@@ -105,7 +105,7 @@ int screen_width = 1000;
 int screen_height = 610;
 int speedometer_X=25,speedometer_Y=100;
 bool player=true,throw_ball=false,angle_set_throw=true;
-
+int checkvalue=1;
 
 /**======================
  *!    Moveable text 

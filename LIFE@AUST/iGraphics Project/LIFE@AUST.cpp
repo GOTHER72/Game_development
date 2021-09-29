@@ -141,6 +141,10 @@ void iDraw()
    		changable_text();
         screen_level_1_throw();
 		instruction_move();
+		if(checkvalue==1){
+		printf("Throw %d\nAngle %d\nplayer %d", throw_ball,angle_set_throw,player);
+		checkvalue=2;
+		}
 	}
 
 }
@@ -235,7 +239,7 @@ void iKeyboard(unsigned char key)
 
 	if ( key == 's' && screen == 7 && book_state == 1 ) user_point_appender(game_point);
 
-	if(screen == 7 )
+	if(screen == 7 ||screen == 18)
 	{
 		ball_throw_command(key);
 	}

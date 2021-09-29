@@ -61,6 +61,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\LIFE%40AUST\iGraphics Project\headers\throwfunction.h" />
+    <ClInclude Include="..\..\LIFE%40AUST\iGraphics Project\headers\variables.h" />
     <ClInclude Include="bitmap_loader.h" />
     <ClInclude Include="chandrima created throwfunction.h" />
     <ClInclude Include="file_handler.h" />

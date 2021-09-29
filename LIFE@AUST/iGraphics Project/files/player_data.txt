@@ -24,6 +24,22 @@ Point 20
 
 Name parverz
 Point 10
-Name                         pad
-Name asdasd
+
+Name tdtyd
 Point 10
+Name gyyg
+Name tyftd
+Point 0
+Name yggyf
+Point 0
+Point 10
+Point 10
+Point 20
+Point 0
+Name uyftf
+Point 0
+Point 0
+Name dsffgsr
+Point 0
+Point 10
+Point 0

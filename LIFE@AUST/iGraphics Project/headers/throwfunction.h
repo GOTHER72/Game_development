@@ -5,16 +5,14 @@ void velocityControl();
 void VelocityBar();
 void  ball_throw_command(unsigned char key);
 void ballMove();
-
 void playGame()
 {
-
 	if(player==true)
 	{
 
 		iLine(152,168,line_X+142,line_Y+158);
 		//iShowBMPAlternativeSkipWhite(throw_object_X,throw_object_Y,"kick_1.bmp");
-	     iShowImage(throw_object_X,throw_object_Y,50,50,throw_brain);
+	    iShowImage(throw_object_X,throw_object_Y,50,50,throw_brain);
 		if(!angle_set_throw)
 		{
 			velocityControl();													///calling velocity control bar
@@ -164,7 +162,6 @@ void VelocityBar()								///in this function white rectangle goes up and down a
 	//printf(" velocity = %d\n",velocity);
 }
 
-
 void  ball_throw_command(unsigned char key)
 {
 	if(player==true)
@@ -181,13 +178,13 @@ void  ball_throw_command(unsigned char key)
 				if(left_chances == 0 )
 				{
 					user_point_appender(game_point);
-					if (game_point >= 1)
+					if (game_point == 0)
 					{
 						screen = 17;
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
 					}
-					else if (game_point == 0 )
+					else if (game_point <0 )
 					{
 						screen = 16;
 						PlaySound("music\\Game over.wav",NULL,SND_ASYNC);
@@ -206,8 +203,9 @@ void  ball_throw_command(unsigned char key)
 			angle_set_throw=false;
 
 		}
-	}
 
+	}
+	
 }
 void ballMove()						//ball moving function
 {
@@ -228,43 +226,36 @@ void ballMove()						//ball moving function
 		if(throw_object_X + 50>=560 && throw_object_X + 50<=610 &&  throw_object_Y+50>=obstacle_me_y && throw_object_Y+50<=obstacle_me_y+50)
 		{
 			PlaySound("music\\fail.wav",NULL,SND_ASYNC);
-			//printf("ME");
 			return_time=1;
 			sound = 1;
 		}
 		if(throw_object_X + 50>=620 && throw_object_X + 50<=670 && throw_object_Y+50>=obstacle_cse1203_y && throw_object_Y+50<=obstacle_cse1203_y+50)
 		{
 			PlaySound("music\\fail.wav",NULL,SND_ASYNC);
-			//printf("cse");
 			return_time=1;
 			sound = 1;
 		}
 			if(throw_object_X + 50>=680 && throw_object_X + 50<=730 && throw_object_Y+50>=obstacle_cse1205_y && throw_object_Y+50<=obstacle_cse1205_y+50)
 		{
 			PlaySound("music\\fail.wav",NULL,SND_ASYNC);
-			//printf("cse");
 			return_time=1;
 			sound = 1;
 		}
 			if(throw_object_X + 50>=740 && throw_object_X + 50<=790 && throw_object_Y+50>=obstacle_eee_y&&throw_object_Y+50<=obstacle_eee_y+50)
 		{
 			PlaySound("music\\fail.wav",NULL,SND_ASYNC);
-			//printf("eee");
 			return_time=1;
 			sound = 1;
 		}
 			if(throw_object_X + 50>=800 && throw_object_X + 50<=850 && throw_object_Y+50>=obstacle_math_y&&throw_object_Y+50<=obstacle_math_y+50)
 		{
 			PlaySound("music\\fail.wav",NULL,SND_ASYNC);
-			//printf("math");
 			return_time=1;
 			sound = 1;
 		}
 		if(throw_object_X + 50<= 1000 && throw_object_X +50>=868 && throw_object_Y+50<=415 && throw_object_Y +50>=198)   ////Target
 		{
 			PlaySound("music\\cg4.wav",NULL,SND_ASYNC);
-			//printf("\nTARGET IF\n");
-			//printf("Yoo Worked out!!");
 			throw_object_X=142;
 			throw_object_Y=158;
 			throw_ball=false;
@@ -280,7 +271,6 @@ void ballMove()						//ball moving function
 
 		if(throw_object_Y<=0||throw_object_X>1000||throw_object_Y>=610)
 		{
-			//printf("\nelse\n");
 			if(sound == 0)
 			PlaySound("music\\fail.wav",NULL,SND_ASYNC);
 			return_time=0;
