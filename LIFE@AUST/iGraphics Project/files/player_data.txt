@@ -18,3 +18,12 @@ name fatin
 point 30
 Name parvez
 Point 0
+Name chandrima
+Name test case
+Point 20
+
+Name parverz
+Point 10
+Name                         pad
+Name asdasd
+Point 10
