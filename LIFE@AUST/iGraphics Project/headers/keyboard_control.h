@@ -8,6 +8,9 @@ void keyboard_control(unsigned char key)
 		{
 			mode = 3;
 			screen = 7;
+			
+			total_game_point =0;
+			game_point =0;
 
 			strcpy(details[total_user+1].name, player_name);
 			printf("%s\n", details[total_user+1].name);
@@ -16,6 +19,8 @@ void keyboard_control(unsigned char key)
 			for(int i = 0; i < length; i++)
 				player_name[i] = 0;
 			length = 0;
+
+
 		}
 		else
 		{

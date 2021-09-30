@@ -25,10 +25,13 @@
 #include "headers//text_manager.h"
 #include "headers//keyboard_control.h"
 
+void file_handler();
+
 void iDraw()
 {
 
 	iClear();
+	file_handler();
 
     if (screen == 1 || screen ==14 )
     {
@@ -176,7 +179,7 @@ void file_handler()
 {
 	file_line_counter();
 	file_scanner();
-	point_array_modified = sort_decreasing_order(delete_duplicate_element(point_array));
+	point_array_modified = sort_decreasing_order(point_array);
 	highest_score_printer();
 }
 
@@ -194,7 +197,8 @@ int main()
 {
 	
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
-	file_handler();
+	//iSetTimer(20,file_handler);
+
 	newGame();
 	image_load();
 	timer_control();

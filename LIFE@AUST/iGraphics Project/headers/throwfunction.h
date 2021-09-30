@@ -279,23 +279,21 @@ void level_controller_1()
 {
 			if(left_chances == 0  && level == 1)
 				{
-					
-					if (game_point >= 0) //condition for leveling up
+					total_game_point+=game_point;
+
+					if (game_point >= 10) //condition for leveling up
 					{
 						screen = 17;
-
-						total_game_point+=game_point;
-
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
 						level = 2;
 					}
-					else if (game_point <0 )
+					else if (game_point <10 )
 					{
 						screen = 16;
 						PlaySound("music\\Game over.wav",NULL,SND_ASYNC);
 						throw_ball=false;
-						user_point_appender(game_point);
+						user_point_appender(total_game_point);
 					}
 
 					left_chances = 10;
@@ -304,21 +302,22 @@ void level_controller_1()
 
 			if(left_chances == 0  && level == 2)
 				{
+					total_game_point+=game_point;
 					
-					if (game_point >= 0) //condition for leveling up
+					if (game_point >= 10) //condition for leveling up
 					{
 						screen = 17;
-						total_game_point+=game_point;
+						
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
 						level = 3;
 					}
-					else if (game_point <0 )
+					else if (game_point < 10 )
 					{
 						screen = 16;
 						PlaySound("music\\Game over.wav",NULL,SND_ASYNC);
 						throw_ball=false;
-						user_point_appender(game_point);
+						user_point_appender(total_game_point);
 					}
 
 					left_chances = 10;
@@ -327,23 +326,22 @@ void level_controller_1()
 
 				if(left_chances == 0  && level == 3)
 				{
-					
-					if (game_point >= 0) //condition for leveling up
+					total_game_point+=game_point;
+
+					if (game_point >= 10) //condition for leveling up
 					{
 						screen = 20;
-
-						total_game_point+=game_point;
-
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
 						level = 3;
+						user_point_appender(total_game_point);
 					}
-					else if (game_point <0 )
+					else if (game_point < 10 )
 					{
 						screen = 16;
 						PlaySound("music\\Game over.wav",NULL,SND_ASYNC);
 						throw_ball=false;
-						user_point_appender(game_point);
+						user_point_appender(total_game_point);
 					}
 
 					left_chances = 10;
