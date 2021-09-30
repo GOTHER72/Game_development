@@ -277,12 +277,15 @@ void ballMove()						//ball moving function
 
 void level_controller_1()
 {
-	if(left_chances == 0  && level == 1)
+			if(left_chances == 0  && level == 1)
 				{
 					
-					if (game_point == 0) //condition for leveling up
+					if (game_point >= 0) //condition for leveling up
 					{
 						screen = 17;
+
+						total_game_point+=game_point;
+
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
 						level = 2;
@@ -302,9 +305,10 @@ void level_controller_1()
 			if(left_chances == 0  && level == 2)
 				{
 					
-					if (game_point == 0) //condition for leveling up
+					if (game_point >= 0) //condition for leveling up
 					{
 						screen = 17;
+						total_game_point+=game_point;
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
 						level = 3;
@@ -324,9 +328,12 @@ void level_controller_1()
 				if(left_chances == 0  && level == 3)
 				{
 					
-					if (game_point == 0) //condition for leveling up
+					if (game_point >= 0) //condition for leveling up
 					{
 						screen = 20;
+
+						total_game_point+=game_point;
+
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
 						level = 3;

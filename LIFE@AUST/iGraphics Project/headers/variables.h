@@ -77,6 +77,9 @@ int book_state = 1;
 int game_point = 0 ;
 char game_point_char[10];
 
+int total_game_point = 0 ;
+char total_game_point_char[10];
+
 char left_chances_char[10];
 
 int frame_width = 1000, frame_height= 610 ;
@@ -200,8 +203,4 @@ void image_load()
 
     screen_certificate = iLoadImage("images//screen_certificate.png");
 
-    
-
-
-	
 }

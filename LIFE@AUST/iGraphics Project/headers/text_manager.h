@@ -31,3 +31,23 @@ void changable_text(){
 	std::sprintf(left_chances_char, "%d", left_chances-1);
     iText(270, 495, left_chances_char,GLUT_BITMAP_TIMES_ROMAN_24);
 }
+
+void certificate_text()
+{	
+	iSetColor(86,116,127);
+	
+    iText(469, 309, details[total_user+1].name ,GLUT_BITMAP_TIMES_ROMAN_24);
+
+	
+    iText(391, 220, "Three",GLUT_BITMAP_HELVETICA_18);
+
+	std::sprintf(total_game_point_char, "%d", total_game_point);
+	iText(391, 190, total_game_point_char,GLUT_BITMAP_HELVETICA_18);
+
+	float perfection;
+	char perfection_char[10];
+	perfection = ((total_game_point * 100) / 270);
+	std::sprintf(perfection_char, "%.2f", perfection);
+	iText(391, 160, perfection_char,GLUT_BITMAP_HELVETICA_18);
+
+}

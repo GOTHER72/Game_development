@@ -116,8 +116,18 @@ void iDraw()
 		instruction_move();
 	
 	}
-	if (screen == 20 ) iShowImage(0,0,screen_width,screen_height,screen_go_level_3);
-	if (screen == 21 ) iShowImage(0,0,screen_width,screen_height,screen_certificate);
+	if (screen == 20 ) 
+	{
+		iShowImage(0,0,screen_width,screen_height,screen_go_level_3);
+		
+	}
+	if (screen == 21 ) 
+	{	
+		
+		iShowImage(0,0,screen_width,screen_height,screen_certificate);
+		certificate_text();
+		
+	}
 
 }
 
@@ -140,7 +150,7 @@ void iMouse(int button, int state, int mx, int my)
 {
 		if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN)
 		{
-		    printf("x= %d\ty= %d\t screen = %d\n", mx,my,screen);
+		    printf("x= %d\ty= %d\t screen = %d\t Total game point %d \n", mx,my,screen,total_game_point);
             screen_change(mx,my);
         }
 
