@@ -51,8 +51,10 @@ void screen_change(int mx,int my)
 			 *================================================================================================**/
 			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==7 )    screen = 3 ;
 			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==8)    screen = 3 ;
-			
+
             else if( screen >= 2 &&  screen <= 20  && mx >= 21 && mx <= 172 && my >= 553 && my <= 586  )  screen = 1 ;
+
+			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586 && screen == 21 )  screen = 20 ;
 			
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==3 ) 
 			{
@@ -110,6 +112,10 @@ void screen_change(int mx,int my)
 
 			else if( mx >= 353 && mx <= 597 && my >= 343 && my <= 398 && screen == 17 && level == 3 )  screen = 19 ;
 
+			else if( mx >= 830 && mx <= 982 && my >= 32 && my <= 67 && screen == 20  )  screen = 21 ;
+
+
+
 			//else if( mx >= 353 && mx <= 597 && my >= 343 && my <= 398 && screen == 19 )  screen = 20 ;
 
 
@@ -138,6 +144,7 @@ void screen_change(int mx,int my)
 // screen = 16 means --------- this means that the game is over 
 // screen = 17 means --------- this means the interval before going to next level game
 // screen = 18 means --------- this means this is the starting of second level
-// screen = 19 means ---------
-// screen = 20 means ---------
+// screen = 19 means --------- this is the interface of the third level
+// screen = 20 means --------- this is the interval period before going to level 4
+// screen = 21 means --------- this is for attaching the certificates
 

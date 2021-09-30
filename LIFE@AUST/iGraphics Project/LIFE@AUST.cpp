@@ -157,6 +157,7 @@ void iDraw()
 	
 	}
 	if (screen == 20 ) iShowImage(0,0,screen_width,screen_height,screen_go_level_3);
+	if (screen == 21 ) iShowImage(0,0,screen_width,screen_height,screen_certificate);
 
 
 }

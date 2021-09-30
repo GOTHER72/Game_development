@@ -10,7 +10,7 @@ int screen_game_over;
 int screen_go_level_2,screen_level_2;
 int screen_go_level_3,screen_level_3;
 
-int obstacle_bamboo;
+int screen_certificate;
 
 int screen_level_1,screen_resume_game;
 
@@ -143,7 +143,6 @@ void image_load()
     screen_resume_game   = iLoadImage("images//screen_resume.png");
 	screen_input       = iLoadImage("images//screen_input.png");
 
-    obstacle_bamboo    = iLoadImage("images//bamboo.png");
 
 	screen_member_light    = iLoadImage("images//screen_member_light.png");
 	screen_control_light   = iLoadImage("images//screen_control_light.png");
@@ -174,5 +173,8 @@ void image_load()
 
 	screen_level_2 = iLoadImage("images//screen_level_2.png");
 	screen_level_3 = iLoadImage("images//screen_level_3.png");
+    screen_certificate = iLoadImage("images//screen_certificate.png");
+
+
 	
 }
