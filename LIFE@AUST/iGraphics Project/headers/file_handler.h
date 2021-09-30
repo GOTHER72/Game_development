@@ -125,7 +125,7 @@ void highest_score_printer(){ //this function will print the highest score in a 
    {
          fprintf(fp,"Highest Scores \n");
 
-         for (int i =0 ; i <total_user ;i ++) {
+         for (int i =0 ; i < 7 ;i ++) {
 
                      for	(int j = 0 ; j <total_user;j++)
                     {

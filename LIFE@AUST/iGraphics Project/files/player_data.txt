@@ -18,18 +18,7 @@ name fatin
 point 30
 Name parvez
 Point 0
-Name chandrima
-Name test case
-Point 20
-Name parvez
+Name asda
+Name ada
 Point 0
-Name parvez
-Point 0
-Name parvez
-Name play
 Name as
-Name yum
-Name  
-Name asd
-Name asd
-Name asd
