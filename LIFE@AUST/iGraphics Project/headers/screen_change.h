@@ -105,7 +105,11 @@ void screen_change(int mx,int my)
 
 			else if( mx >= 829 && mx <= 923 && my >= 34 && my <= 67 && screen == 16 )  screen = 15 ; //retry option
 
-			else if( mx >= 353 && mx <= 597 && my >= 343 && my <= 398 && screen == 17 )  screen = 18 ;
+			else if( mx >= 353 && mx <= 597 && my >= 343 && my <= 398 && screen == 17 && level == 2 )  screen = 18 ;
+
+			else if( mx >= 353 && mx <= 597 && my >= 343 && my <= 398 && screen == 17 && level == 3 )  screen = 19 ;
+
+			//else if( mx >= 353 && mx <= 597 && my >= 343 && my <= 398 && screen == 19 )  screen = 20 ;
 
 
 
