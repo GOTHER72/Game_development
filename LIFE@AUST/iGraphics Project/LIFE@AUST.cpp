@@ -156,6 +156,8 @@ void iDraw()
 		instruction_move();
 	
 	}
+	if (screen == 20 ) iShowImage(0,0,screen_width,screen_height,screen_go_level_3);
+
 
 }
 

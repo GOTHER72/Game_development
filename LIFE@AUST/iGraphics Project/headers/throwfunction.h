@@ -320,4 +320,26 @@ void level_controller_1()
 					left_chances = 10;
 					game_point = 0;
 				}
+
+				if(left_chances == 0  && level == 3)
+				{
+					
+					if (game_point == 0) //condition for leveling up
+					{
+						screen = 20;
+						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
+						throw_ball=false;
+						level = 3;
+					}
+					else if (game_point <0 )
+					{
+						screen = 16;
+						PlaySound("music\\Game over.wav",NULL,SND_ASYNC);
+						throw_ball=false;
+						user_point_appender(game_point);
+					}
+
+					left_chances = 10;
+					game_point = 0;
+				}
 }

@@ -51,7 +51,8 @@ void screen_change(int mx,int my)
 			 *================================================================================================**/
 			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==7 )    screen = 3 ;
 			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==8)    screen = 3 ;
-            else if( screen >= 2 &&  screen <= 18  && mx >= 21 && mx <= 172 && my >= 553 && my <= 586  )  screen = 1 ;
+			
+            else if( screen >= 2 &&  screen <= 20  && mx >= 21 && mx <= 172 && my >= 553 && my <= 586  )  screen = 1 ;
 			
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==3 ) 
 			{
