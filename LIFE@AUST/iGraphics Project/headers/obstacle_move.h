@@ -2,7 +2,7 @@
  *!                                    This is the logic for the obstacles to move 
  *================================================================================================**/
 void rectangle_change_1(){
-	if(screen==7||screen==18)
+	if(screen==7||screen==18||screen==19)
 	{
 
 	srand(time(0));  

@@ -142,7 +142,7 @@ void screen_change(int mx,int my)
 // screen = 4  means --------- the list of the devs that created this game
 // screen = 5  means --------- the story of the game will be shown
 // screen = 6  means --------- the control of the game will be shown
-// screen = 7  means --------- this is the level 1 screen 
+// screen = 7  means --------- this is the interface of the 1 level
 // screen = 8  means --------- this is the resume game screen
 // screen = 9  means --------- this is the //!light version of member screen
 // screen = 10 means --------- this is the //!light version of control screen
@@ -153,8 +153,8 @@ void screen_change(int mx,int my)
 // screen = 15 means --------- this is the input screen where user will input his name
 // screen = 16 means --------- this means that the game is over 
 // screen = 17 means --------- this means the interval before going to next level game
-// screen = 18 means --------- this means this is the starting of second level
-// screen = 19 means --------- this is the interface of the third level
+// screen = 18 means --------- this is the interface of the 2 level
+// screen = 19 means --------- this is the interface of the 3 level
 // screen = 20 means --------- this is the interval period before going to level 4
 // screen = 21 means --------- this is for attaching the certificates
 // screen = 22 means --------- this is page for taking name input from resume option

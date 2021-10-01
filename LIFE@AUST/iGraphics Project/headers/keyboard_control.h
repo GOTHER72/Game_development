@@ -35,7 +35,32 @@ void keyboard_control(unsigned char key)
 		{
 			mode = 3;
 
-			if(user_authenticator () == true) screen = 7;
+			if(user_authenticator () == true)
+			
+			{
+				if (resume_details[resume_user_number].resume_game_level == 1)
+				{
+						 screen = 7;
+						 left_chances = resume_details[resume_user_number].resume_left_chances;
+						 game_point   = resume_details[resume_user_number].resume_game_point;
+				} 
+				else if (resume_details[resume_user_number].resume_game_level == 2)
+				{
+						screen = 18;
+						left_chances = resume_details[resume_user_number].resume_left_chances;
+						 game_point   = resume_details[resume_user_number].resume_game_point;
+
+				} 
+				else if (resume_details[resume_user_number].resume_game_level == 3) 
+				{
+						screen = 19;
+						 left_chances = resume_details[resume_user_number].resume_left_chances;
+						 game_point   = resume_details[resume_user_number].resume_game_point;
+					
+				}
+
+
+			} 
 			else if(user_authenticator () == false) screen = 23;
 			
 			
