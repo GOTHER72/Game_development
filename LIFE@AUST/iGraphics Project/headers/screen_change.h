@@ -56,6 +56,8 @@ void screen_change(int mx,int my)
 
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586 && screen == 22 )  screen = 3 ;
 
+			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586 && screen == 23 )  screen = 3 ;
+
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586 && screen == 21 )  screen = 20 ;
 			
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==3 ) 
@@ -156,4 +158,5 @@ void screen_change(int mx,int my)
 // screen = 20 means --------- this is the interval period before going to level 4
 // screen = 21 means --------- this is for attaching the certificates
 // screen = 22 means --------- this is page for taking name input from resume option
+// screen = 23 means --------- this is the name not found screen
 

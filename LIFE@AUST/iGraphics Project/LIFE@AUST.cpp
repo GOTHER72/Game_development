@@ -136,15 +136,15 @@ void iDraw()
 	{	
 		
 		iShowImage(0,0,screen_width,screen_height,screen_input_resume);
-
-		//left_chances = 10;
-		//game_point = 0;
 		if(mode == 1) {
 		iSetColor(255, 255, 255);
 		iText(300, 300, resume_player_name,GLUT_BITMAP_TIMES_ROMAN_24);
 		}
 		
 	}
+	if (screen == 23 ) iShowImage(0,0,screen_width,screen_height,screen_name_not_found);
+		
+	
 
 }
 

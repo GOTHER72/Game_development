@@ -34,7 +34,7 @@ void keyboard_control(unsigned char key)
         if(key == '\r')
 		{
 			mode = 3;
-			screen = 7;
+			screen = 23;
 			
 			// total_game_point =0;
 			// game_point =0;
@@ -52,7 +52,7 @@ void keyboard_control(unsigned char key)
 		}
 		else
 		{
-			player_name[length] = key;
+			resume_player_name[length] = key;
 			length++;
 		}
 	}

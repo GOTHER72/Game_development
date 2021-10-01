@@ -23,3 +23,6 @@ Point 30
 Name conti22
 Point 20
 Point 0
+Point 0
+Name parvez
+Point 0
