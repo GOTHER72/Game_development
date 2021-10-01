@@ -22,3 +22,4 @@ Name continiutyu
 Point 30
 Name conti22
 Point 20
+Point 0

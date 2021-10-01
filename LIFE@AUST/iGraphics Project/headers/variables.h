@@ -5,6 +5,8 @@ int screen_play,screen_highscore,screen_control,screen_member,screen_story;
 
 int screen_member_light,screen_control_light,screen_story_light ,screen_highscore_light,screen_play_light,joystick_light;
 
+int screen_input_resume;
+
 int screen_game_over;
 
 int screen_go_level_2,screen_level_2;
@@ -17,7 +19,6 @@ int screen_level_1,screen_resume_game;
 int f=0;
 
 int menu_picture,high_score;
-
 
 bool showMenu = false,showGameOver=false,loadMenu=true,monkey_gayeb=false;
 bool showPlay=false,showAbout=false,showInst=false,showOption=false,showResult=false;
@@ -127,6 +128,12 @@ int instruction_move_flag =1,instruction_move_x = 1000 , instruction_move_dx = 5
 /**======================
  *!    Moveable text 
  *========================**/
+
+/**================================================================================================
+ *!                                        Variable for resume user 
+ *================================================================================================**/
+
+char resume_player_name[100];
 int level =1;
 
 void newGame()										///new game starting ! reseting all the values
@@ -162,6 +169,8 @@ void image_load()
     screen_level_1      = iLoadImage("images//screen_level_1.png");
     screen_resume_game  = iLoadImage("images//screen_resume.png");
 	screen_input        = iLoadImage("images//screen_input.png");
+
+	screen_input_resume       = iLoadImage("images//screen_input_resume.png");
 
 
 	screen_member_light    = iLoadImage("images//screen_member_light.png");

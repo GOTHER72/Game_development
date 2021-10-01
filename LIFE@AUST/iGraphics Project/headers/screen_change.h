@@ -54,6 +54,8 @@ void screen_change(int mx,int my)
 
             else if( screen >= 2 &&  screen <= 20  && mx >= 21 && mx <= 172 && my >= 553 && my <= 586  )  screen = 1 ;
 
+			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586 && screen == 22 )  screen = 3 ;
+
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586 && screen == 21 )  screen = 20 ;
 			
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==3 ) 
@@ -68,7 +70,13 @@ void screen_change(int mx,int my)
 			 *!                                                   Play button and resume button
 			 *=======================================================================================================================**/
             else if ( mx >= 379 && mx <= 623 && my >= 343 && my <= 396  && (screen == 3 || screen == 13) && resume_game_flag_throw == 1) screen = 15;
-            else if ( mx >= 379 && mx <= 623 && my >= 216 && my <= 270  && (screen == 3 || screen == 13)) screen = 7;
+            else if ( mx >= 379 && mx <= 623 && my >= 216 && my <= 270  && (screen == 3 || screen == 13))
+			
+			{
+				mode=1;
+				screen = 22;
+
+			} 
 
 
 			/**=======================================================================================================================
@@ -147,4 +155,5 @@ void screen_change(int mx,int my)
 // screen = 19 means --------- this is the interface of the third level
 // screen = 20 means --------- this is the interval period before going to level 4
 // screen = 21 means --------- this is for attaching the certificates
+// screen = 22 means --------- this is page for taking name input from resume option
 

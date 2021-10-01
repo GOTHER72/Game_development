@@ -17,6 +17,7 @@
 
 #include "headers//variables.h"
 #include "headers//file_handler.h"
+#include "headers//resume_user.h"
 #include "headers//obstacle_move.h"
 #include "headers//obstacle_image_shower.h"
 #include "headers//throwfunction.h"
@@ -31,7 +32,7 @@ void iDraw()
 {
 
 	iClear();
-	file_handler();
+	
 
     if (screen == 1 || screen ==14 )
     {
@@ -131,6 +132,19 @@ void iDraw()
 		certificate_text();
 		
 	}
+	if (screen == 22 ) 
+	{	
+		
+		iShowImage(0,0,screen_width,screen_height,screen_input_resume);
+
+		//left_chances = 10;
+		//game_point = 0;
+		if(mode == 1) {
+		iSetColor(255, 255, 255);
+		iText(300, 300, resume_player_name,GLUT_BITMAP_TIMES_ROMAN_24);
+		}
+		
+	}
 
 }
 
@@ -198,7 +212,7 @@ int main()
 	
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	//iSetTimer(20,file_handler);
-
+	file_handler();
 	newGame();
 	image_load();
 	timer_control();

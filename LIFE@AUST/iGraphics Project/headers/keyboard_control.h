@@ -29,6 +29,34 @@ void keyboard_control(unsigned char key)
 		}
 	}
 
+	if(mode == 1 && screen == 22)
+	{
+        if(key == '\r')
+		{
+			mode = 3;
+			screen = 7;
+			
+			// total_game_point =0;
+			// game_point =0;
+
+			// strcpy(details[total_user+1].name, player_name);
+			printf("%s\n", resume_player_name);
+			// user_name_appender();
+
+			for(int i = 0; i < length; i++)
+				resume_player_name[i] = 0;
+
+			length = 0;
+
+
+		}
+		else
+		{
+			player_name[length] = key;
+			length++;
+		}
+	}
+
 	if (key == 'p' && (screen == 7 || screen == 19))
 	{
 			book_state =0;
