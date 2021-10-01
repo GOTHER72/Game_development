@@ -1,24 +1,6 @@
 #include<iostream>
 using namespace std;
-#define FILENAME3 "user_data.txt"
-
-int resume_user_number;
-int resume_total_user;
-
-struct resume_details {
-    char resume_name [10];
-    int  resume_left_chances;
-    int  resume_game_level;
-    int  resume_game_point;
-} resume_details [20]; 
-
-struct resume_string_details{
-    char  resume_name [10];
-    char  resume_left_chances[10];
-    char  resume_game_level[10];
-    char  resume_game_point[10];
-} resume_string_details [20];
-
+#define FILENAME3 "files//resume_user_data.txt"
 
 void resume_user_counter(){  // counts the line of a file
 
@@ -50,7 +32,7 @@ void resume_user_counter(){  // counts the line of a file
 void resume_file_scanner()  //scans the data of the file
 {
 
-    FILE *user_file = fopen ("user_data.txt", "r");  //opening the file in reading mode
+    FILE *user_file = fopen (FILENAME3, "r");  //opening the file in reading mode
 
     if (user_file == NULL){
         printf("Resume File not found \n");
@@ -67,7 +49,7 @@ void resume_file_scanner()  //scans the data of the file
     }        
 }
 
-void file_data_printer()  //prints the data of the file
+void resume_file_data_printer()  //prints the data of the file
 {
     for (int i =0 ; i < resume_total_user ; i ++)
     {
@@ -83,14 +65,11 @@ void file_data_printer()  //prints the data of the file
 
 bool user_authenticator ()  //checking if the user is new or old return a true or false value
 {   
-    char user_name[10];
     bool old_user_value = false;
-    printf("Enter your user name : \n");
-    scanf ("%s",&user_name);
 
     for (int i = 0 ; i < resume_total_user ; i++)
         {
-            if( !strcmp(resume_details[i].resume_name,user_name) )
+            if( !strcmp(resume_details[i].resume_name,resume_player_name) )
             {
                 old_user_value = true; 
                 resume_user_number=i;

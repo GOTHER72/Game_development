@@ -27,6 +27,7 @@
 #include "headers//keyboard_control.h"
 
 void file_handler();
+void resume_file_handler();
 
 void iDraw()
 {
@@ -197,6 +198,15 @@ void file_handler()
 	highest_score_printer();
 }
 
+void resume_file_handler()
+{
+	resume_user_counter();
+    resume_file_scanner();
+	resume_file_data_printer();
+    
+    //resume_data_assigner();
+}
+
 void timer_control()
 {
 	iSetTimer(200,menuLoad);
@@ -213,9 +223,13 @@ int main()
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	//iSetTimer(20,file_handler);
 	file_handler();
+	resume_file_handler();
 	newGame();
 	image_load();
 	timer_control();
 	iStart(); // it will start drawing
 	return 0;
 }
+
+
+

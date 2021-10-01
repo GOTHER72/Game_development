@@ -34,7 +34,11 @@ void keyboard_control(unsigned char key)
         if(key == '\r')
 		{
 			mode = 3;
-			screen = 23;
+
+			if(user_authenticator () == true) screen = 7;
+			else if(user_authenticator () == false) screen = 23;
+			
+			
 			
 			// total_game_point =0;
 			// game_point =0;

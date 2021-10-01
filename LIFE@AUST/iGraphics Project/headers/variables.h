@@ -135,6 +135,25 @@ int instruction_move_flag =1,instruction_move_x = 1000 , instruction_move_dx = 5
  *================================================================================================**/
 
 char resume_player_name[100];
+
+int resume_user_number;
+int resume_total_user;
+
+struct resume_details {
+    char resume_name [10];
+    int  resume_left_chances;
+    int  resume_game_level;
+    int  resume_game_point;
+} resume_details [20]; 
+
+struct resume_string_details{
+    char  resume_name [10];
+    char  resume_left_chances[10];
+    char  resume_game_level[10];
+    char  resume_game_point[10];
+} resume_string_details [20];
+
+
 int level =1;
 
 void newGame()										///new game starting ! reseting all the values
