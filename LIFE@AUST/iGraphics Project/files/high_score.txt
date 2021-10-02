@@ -1,11 +1,7 @@
 Highest Scores 
 name tara
 point 95
-name miraz
-point 95
 name tara
-point 95
-name miraz
 point 95
 name yusha
 point 75

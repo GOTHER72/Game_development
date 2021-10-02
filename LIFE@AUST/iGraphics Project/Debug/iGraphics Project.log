@@ -1,4 +1,4 @@
-﻿Build started 10/2/2021 12:54:44 AM.
+﻿Build started 10/2/2021 12:59:32 PM.
      1>Project "F:\1_2_games\Game_development\LIFE@AUST\iGraphics Project\iGraphics Project.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\LIFE@AUST.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -18,4 +18,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:05.24
+Time Elapsed 00:00:01.53

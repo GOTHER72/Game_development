@@ -46,14 +46,14 @@ void keyboard_control(unsigned char key)
 				} 
 				else if (resume_details[resume_user_number].resume_game_level == 2)
 				{
-						screen = 18;
-						left_chances = resume_details[resume_user_number].resume_left_chances;
+						 screen = 18;
+						 left_chances = resume_details[resume_user_number].resume_left_chances;
 						 game_point   = resume_details[resume_user_number].resume_game_point;
 
 				} 
 				else if (resume_details[resume_user_number].resume_game_level == 3) 
 				{
-						screen = 19;
+						 screen = 19;
 						 left_chances = resume_details[resume_user_number].resume_left_chances;
 						 game_point   = resume_details[resume_user_number].resume_game_point;
 					
@@ -67,7 +67,6 @@ void keyboard_control(unsigned char key)
 			
 			// total_game_point =0;
 			// game_point =0;
-
 			// strcpy(details[total_user+1].name, player_name);
 			printf("%s\n", resume_player_name);
 			// user_name_appender();

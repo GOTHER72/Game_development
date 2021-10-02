@@ -34,7 +34,7 @@ void iDraw()
 
 	iClear();
 	
-
+	//file_scanner();
     if (screen == 1 || screen ==14 )
     {
         if(showMenu == false && loadMenu==true)				//loading screen
@@ -192,7 +192,7 @@ void iSpecialKeyboard(unsigned char key)  //special key that will end the game
 
 void file_handler()
 {
-	file_line_counter();
+	//file_line_counter();
 	file_scanner();
 	point_array_modified = sort_decreasing_order(point_array);
 	highest_score_printer();
@@ -222,11 +222,14 @@ int main()
 	
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	//iSetTimer(20,file_handler);
+
+
 	file_handler();
 	resume_file_handler();
 	newGame();
 	image_load();
 	timer_control();
+
 	iStart(); // it will start drawing
 	return 0;
 }

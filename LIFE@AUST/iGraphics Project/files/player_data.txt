@@ -14,8 +14,6 @@ name fatin
 point 35
 Name test2
 Point 15
-Name test1
-Point 0
 Name test2
 Point 20
 Name continiutyu

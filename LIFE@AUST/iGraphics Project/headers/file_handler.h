@@ -138,7 +138,8 @@ void highest_score_printer(){ //this function will print the highest score in a 
          			            fprintf(fp,"%s %d\n",string_details[j].point,details[j].point);
 
                               strcpy (high_scorer[i].name , details[j].name);
-                              high_scorer[i].point = details[j].point;  
+                              high_scorer[i].point = details[j].point;
+                              break; 
                             }
                     }
 				}
