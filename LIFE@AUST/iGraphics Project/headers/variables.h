@@ -9,6 +9,7 @@ int screen_input_resume;
 
 int screen_game_over;
 int screen_name_not_found;
+int screen_append_data ;
 
 int screen_go_level_2,screen_level_2;
 int screen_go_level_3,screen_level_3;
@@ -192,6 +193,7 @@ void image_load()
 
 	screen_input_resume       = iLoadImage("images//screen_input_resume.png");
 	screen_name_not_found      = iLoadImage("images//screen_name_not_found.png");
+	screen_append_data = iLoadImage("images//screen_append_data.png");
 
 
 	screen_member_light    = iLoadImage("images//screen_member_light.png");

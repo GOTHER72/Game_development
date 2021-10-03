@@ -33,9 +33,6 @@
     <ClInclude Include="chandrima created throwfunction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="obstacle_move.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="screen_change.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -53,7 +50,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\LIFE%40AUST\iGraphics Project\LIFE%40AUST.cpp">
+    <ClCompile Include="..\..\LIFE%40AUST\iGraphics Project\crushmove.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

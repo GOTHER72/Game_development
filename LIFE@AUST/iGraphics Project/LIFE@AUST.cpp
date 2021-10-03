@@ -144,6 +144,8 @@ void iDraw()
 		
 	}
 	if (screen == 23 ) iShowImage(0,0,screen_width,screen_height,screen_name_not_found);
+
+	if (screen == 24 ) iShowImage(0,0,screen_width,screen_height,screen_append_data);
 		
 	
 
