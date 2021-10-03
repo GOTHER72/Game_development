@@ -25,6 +25,7 @@
 #include "headers//menu.h"
 #include "headers//text_manager.h"
 #include "headers//keyboard_control.h"
+//#include "character_renderer_combine.h"
 
 void file_handler();
 void resume_file_handler();
@@ -114,6 +115,15 @@ void iDraw()
 	if (screen == 19 )
 	{
 		iShowImage(0,0,screen_width,screen_height,screen_level_3);
+
+	// for the character render
+		// iShowImage(230,40,150,35,pic_1);//needed
+		// sad_happy_bar();//needed
+		// iShowImage(girl_x,girl_y,50,150,girl[index]);
+	 	// if(check==1){
+		//  iShowImage(bag_x,bag_y,40,40,bag);
+	 	// }
+
 		book_state=1;
 		show_obstacle_image_3();
    		changable_text();
@@ -183,6 +193,7 @@ void iMouse(int button, int state, int mx, int my)
 void iKeyboard(unsigned char key)
 {
 	keyboard_control(key);
+	
 }
 
 void iSpecialKeyboard(unsigned char key)  //special key that will end the game
@@ -219,11 +230,16 @@ void timer_control()
 	timer_obstacle_change = iSetTimer(20, rectangle_change_1);
 }
 
+
+
+
 int main()
 {
 	
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
 	//iSetTimer(20,file_handler);
+
+	
 
 
 	file_handler();
@@ -231,6 +247,10 @@ int main()
 	newGame();
 	image_load();
 	timer_control();
+
+	// for the character render
+	// load_crush_image();
+	// load_stressbar_image();
 
 	iStart(); // it will start drawing
 	return 0;

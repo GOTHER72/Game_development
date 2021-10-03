@@ -236,3 +236,5 @@ void image_load()
     screen_certificate = iLoadImage("images//screen_certificate.png");
 
 }
+
+

@@ -4,6 +4,7 @@
 # include "headers//iGraphics.h"
 # include "headers//bitmap_loader.h"
 # include "sad_happy_bar.h"
+int screen = 19;
 
 /*
 	function iDraw() is called again and again by the system.
@@ -13,6 +14,9 @@ void iDraw()
 	//place your drawing codes here
 
 	iClear();
+
+	if (screen == 19 )
+	{
 	iShowImage(0,0,1000,610,bc);
 
 	iShowImage(230,40,150,35,pic_1);//needed
@@ -23,6 +27,9 @@ void iDraw()
 	 if(check==1){
 		 iShowImage(bag_x,bag_y,40,40,bag);
 	 }
+
+	}
+	
 
 }
 
@@ -98,24 +105,7 @@ void iSpecialKeyboard(unsigned char key)
 	}
 	//place your codes for other keys here
 }
-void load_stressbar_image()
-{
-	pic_1=iLoadImage("stress_bar.png");
 
-	//pic_2=iLoadImage("b6.png");
-	all_pic[0]=iLoadImage("b8.png");
-	all_pic[1]=iLoadImage("b7.png");
-	all_pic[2]=iLoadImage("b6.png");
-    all_pic[3]=iLoadImage("b5.png");
-	all_pic[4]=iLoadImage("b4.png");
-	all_pic[5]=iLoadImage("b3.png");
-    all_pic[6]=iLoadImage("b2.png");
-	all_pic[7]=iLoadImage("b1.png");
-	all_pic[8]=iLoadImage("b9.png");
-	all_pic[9]=iLoadImage("bag.png");
-
-
-}
 
 int main()
 {
