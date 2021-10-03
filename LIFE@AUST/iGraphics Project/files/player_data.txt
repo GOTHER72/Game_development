@@ -27,3 +27,11 @@ Point 0
 Point 0
 Name parvez
 Name asd
+Name parvez
+Name asdas
+Point 60
+Name parved
+Point 30
+Name mirz
+Point 120
+Name par

@@ -257,7 +257,9 @@ void ballMove()						//ball moving function
 		if(throw_object_Y<=0||throw_object_X>1000||throw_object_Y>=610)
 		{
 			if(sound == 0)
-			PlaySound("music\\fail.wav",NULL,SND_ASYNC);
+			{
+					PlaySound("music\\fail.wav",NULL,SND_ASYNC);
+			}
 			return_time=0;
 			throw_object_X=142;
 			throw_object_Y=158;
@@ -348,3 +350,4 @@ void level_controller_1()
 					game_point = 0;
 				}
 }
+

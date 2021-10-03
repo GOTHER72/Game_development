@@ -28,7 +28,7 @@ void changable_text(){
 	std::sprintf(game_point_char, "%d", game_point);
     iText(106, 495, game_point_char,GLUT_BITMAP_TIMES_ROMAN_24);
 
-	std::sprintf(left_chances_char, "%d", left_chances-1);
+	std::sprintf(left_chances_char, "%d", left_chances);
     iText(270, 495, left_chances_char,GLUT_BITMAP_TIMES_ROMAN_24);
 }
 

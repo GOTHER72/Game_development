@@ -2,21 +2,21 @@ void keyboard_control(unsigned char key)
 
 {
     
-	if(mode == 1 && screen == 15)
+	if(mode == 1 && screen == 15) // this is for the play button and new users
 	{
-        if(key == '\r')
+        if(key == '\r') // taking enter key as the input
 		{
 			mode = 3;
-			screen = 7;
+			screen = 7; // going to 1st level of screen
 			
-			total_game_point =0;
+			total_game_point =0; // initializing the points and games from start
 			game_point =0;
 
-			strcpy(details[total_user+1].name, player_name);
+			strcpy(details[total_user+1].name, player_name); // copying the string into a new structure
 			printf("%s\n", details[total_user+1].name);
-			user_name_appender();
+			user_name_appender(); // appending the name in a file upon clicking enter
 
-			for(int i = 0; i < length; i++)
+			for(int i = 0; i < length; i++)// for taking new name 
 				player_name[i] = 0;
 			length = 0;
 
@@ -24,18 +24,18 @@ void keyboard_control(unsigned char key)
 		}
 		else
 		{
-			player_name[length] = key;
+			player_name[length] = key;// taking the key into string
 			length++;
 		}
 	}
 
-	if(mode == 1 && screen == 22)
+	if(mode == 1 && screen == 22) // this is the screen for resume button
 	{
         if(key == '\r')
 		{
-			mode = 3;
+			mode = 3; // exiting from the mode
 
-			if(user_authenticator () == true)
+			if(user_authenticator () == true) 
 			
 			{
 				if (resume_details[resume_user_number].resume_game_level == 1)

@@ -20,3 +20,7 @@ Bugs to solve In Version 3.0
 -- create the character that throws objects
 -- Move the villain character
 
+Bugs that can't be solved due to limitations of i graphics
+
+-- we cant save the data in a file during the runtime!
+

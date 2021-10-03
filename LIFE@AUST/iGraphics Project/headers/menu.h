@@ -11,11 +11,11 @@ void menuLoad()				///menu loading function!
 	}
 }
 
-void rectangle_change(){
+// void rectangle_change(){
 	
-	rect_y1 += rect_dy;
-	 if(rect_y1  > 175 || rect_y1 < 0)rect_dy = -rect_dy;
-}
+// 	rect_y1 += rect_dy;
+// 	 if(rect_y1  > 175 || rect_y1 < 0)rect_dy = -rect_dy;
+// }
 
 /**================================================================================================
  *!                                     This functions are related to the hovering function of the menu 
