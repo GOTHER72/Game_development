@@ -67,6 +67,7 @@ void iMouse(int button, int state, int mx, int my)
 */
 void iKeyboard(unsigned char key)
 {
+	stress_bar_control(key);
 	if(key == 'p')
 	{
 		//do something with 'q'
