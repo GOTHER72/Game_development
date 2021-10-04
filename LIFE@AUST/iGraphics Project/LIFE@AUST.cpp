@@ -25,7 +25,7 @@
 #include "headers//menu.h"
 #include "headers//text_manager.h"
 #include "headers//keyboard_control.h"
-//#include "character_renderer_combine.h"
+#include "character_renderer_combine.h"
 
 void file_handler();
 void resume_file_handler();

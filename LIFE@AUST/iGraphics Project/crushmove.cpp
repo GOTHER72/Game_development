@@ -3,7 +3,7 @@
 */
 # include "headers//iGraphics.h"
 # include "headers//bitmap_loader.h"
-# include "sad_happy_bar.h"
+# include "headers//render.h"
 int screen = 19;
 
 /*
@@ -74,7 +74,7 @@ void iMouse(int button, int state, int mx, int my)
 */
 void iKeyboard(unsigned char key)
 {
-	stress_bar_control(key);
+	//stress_bar_control(key);
 	if(key == 'p')
 	{
 		//do something with 'q'
