@@ -48,6 +48,9 @@
     <ClInclude Include="..\..\LIFE%40AUST\iGraphics Project\headers\file_handler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\LIFE%40AUST\iGraphics Project\headers\render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\LIFE%40AUST\iGraphics Project\LIFE%40AUST.cpp">

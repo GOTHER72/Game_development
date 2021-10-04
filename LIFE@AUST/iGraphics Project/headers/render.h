@@ -64,7 +64,7 @@ void sad_happy_bar(){
 
 
 void change(){
-
+	if(screen ==19){
 	index++;
 
 	if(index<=15)girl_x+=20;
@@ -74,6 +74,7 @@ void change(){
 	if(index==34) {
             index=0;
             girl_x=0;
+	}
 	}
 
 }
