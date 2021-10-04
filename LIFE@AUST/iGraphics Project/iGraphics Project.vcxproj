@@ -74,7 +74,7 @@
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\LIFE%40AUST\iGraphics Project\crushmove.cpp" />
+    <ClCompile Include="..\..\LIFE%40AUST\iGraphics Project\LIFE%40AUST.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

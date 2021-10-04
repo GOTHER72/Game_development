@@ -191,6 +191,7 @@ void high_score_shower(){
 		std::sprintf(serial_char, "%d", i+1);
 		iText(230, high_score_y, serial_char,GLUT_BITMAP_TIMES_ROMAN_24); // for the serial of the high scorer
 
+		
 		std::sprintf(high_score_char, "%d", high_scorer[i].point);
 
 		iText(745, high_score_y, high_score_char,GLUT_BITMAP_TIMES_ROMAN_24);// for the points

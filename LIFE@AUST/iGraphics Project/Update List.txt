@@ -12,15 +12,22 @@ Update version 2.0
 -- Proceeded to level 2
 -- Added retry and resume function
 
-Bugs to solve In Version 3.0
--- make the level 2 playable 
--- save the point of the previous level when going to next level
--- Save the resume state in file in case the user leaves the game
--- proceed to level 3
--- create the character that throws objects
--- Move the villain character
+update solve In Version 3.0
+
+-- made level 2 and level 3 playable
+-- saved the point of the previous level when going to next level
+-- Saved the resume state in file in case the user leaves the game
+-- Proceeded to level 3
+-- created the character that throws objects
+-- Moved the villain character
+-- created a user authenticator that provides the game data of previous level
+-- added new pause button
+-- created resume functionality 
+-- ending credit created with certificate
+-- name not found screen added
+
 
 Bugs that can't be solved due to limitations of i graphics
 
--- we cant save the data in a file during the runtime!
+-- we cant scan the data in a file during the runtime!
 

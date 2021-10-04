@@ -50,7 +50,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\LIFE%40AUST\iGraphics Project\crushmove.cpp">
+    <ClCompile Include="..\..\LIFE%40AUST\iGraphics Project\LIFE%40AUST.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -25,7 +25,7 @@
 #include "headers//menu.h"
 #include "headers//text_manager.h"
 #include "headers//keyboard_control.h"
-#include "character_renderer_combine.h"
+//#include "headers//render.h"
 
 void file_handler();
 void resume_file_handler();
@@ -117,12 +117,12 @@ void iDraw()
 		iShowImage(0,0,screen_width,screen_height,screen_level_3);
 
 	// for the character render
+
 		// iShowImage(230,40,150,35,pic_1);//needed
 		// sad_happy_bar();//needed
 		// iShowImage(girl_x,girl_y,50,150,girl[index]);
-	 	// if(check==1){
-		//  iShowImage(bag_x,bag_y,40,40,bag);
-	 	// }
+	 	// if(check==1) iShowImage(bag_x,bag_y,40,40,bag);
+	 	
 
 		book_state=1;
 		show_obstacle_image_3();
@@ -248,9 +248,10 @@ int main()
 	image_load();
 	timer_control();
 
-	// for the character render
+	//for the character render
 	// load_crush_image();
 	// load_stressbar_image();
+	// timer();
 
 	iStart(); // it will start drawing
 	return 0;

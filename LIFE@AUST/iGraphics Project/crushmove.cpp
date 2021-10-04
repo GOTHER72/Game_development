@@ -20,13 +20,10 @@ void iDraw()
 	iShowImage(0,0,1000,610,bc);
 
 	iShowImage(230,40,150,35,pic_1);//needed
-
 	sad_happy_bar();//needed
-
 	iShowImage(girl_x,girl_y,50,150,girl[index]);
-	 if(check==1){
-		 iShowImage(bag_x,bag_y,40,40,bag);
-	 }
+	if(check==1) iShowImage(bag_x,bag_y,40,40,bag);
+	
 
 	}
 	
@@ -109,11 +106,15 @@ void iSpecialKeyboard(unsigned char key)
 
 int main()
 {
-	timer();
+	
 	
 	iInitialize(1000, 610, "Ball Demo");
+
+	timer();
     load_crush_image();
 	load_stressbar_image();
+
+	
 	iStart();
 
 
