@@ -105,7 +105,9 @@ void iDraw()
 		show_obstacle_image_2();
    		changable_text();
         screen_level_1_throw();
-		instruction_move();
+
+		instruction_move_2();
+
 		if(checkvalue==1){
 		printf("Throw %d\nAngle %d\nplayer %d", throw_ball,angle_set_throw,player);
 		checkvalue=2;
@@ -128,7 +130,7 @@ void iDraw()
 		show_obstacle_image_3();
    		changable_text();
         screen_level_1_throw();
-		instruction_move();
+		instruction_move_3();
 	
 	}
 	if (screen == 20 ) 

@@ -4,6 +4,19 @@ void instruction_move()
 	if (instruction_move_flag ==1)  iText(instruction_move_x , 10, "Press p to stop the books",GLUT_BITMAP_TIMES_ROMAN_24);
 	else if (instruction_move_flag ==2) iText(instruction_move_x , 10, "Press space to use your brain  just throw it!",GLUT_BITMAP_TIMES_ROMAN_24);
 }
+void instruction_move_2()
+{
+	iSetColor(255, 255, 255);
+	if (instruction_move_flag ==1)  iText(instruction_move_x , 10, "No stopping the books now",GLUT_BITMAP_TIMES_ROMAN_24);
+	else if (instruction_move_flag ==2) iText(instruction_move_x , 10, "Press space to use your brain  just throw it!",GLUT_BITMAP_TIMES_ROMAN_24);
+}
+
+void instruction_move_3()
+{
+	iSetColor(255, 255, 255);
+	if (instruction_move_flag ==1)  iText(instruction_move_x , 10, "Avoid the crush and shine in life",GLUT_BITMAP_TIMES_ROMAN_24);
+	else if (instruction_move_flag ==2) iText(instruction_move_x , 10, "Press space to use your brain  just throw it!",GLUT_BITMAP_TIMES_ROMAN_24);
+}
 
 void instructions_text_move()
 

@@ -14,7 +14,7 @@ name suckline
 chances 7
 level 3
 point 45
-name tanivr
+name tanvir
 chances 7
 level 3
 point 60
@@ -22,3 +22,7 @@ Name asd
 chances 7
 level 1
 point 0
+Name test3
+chances 10
+level 2
+point 10
