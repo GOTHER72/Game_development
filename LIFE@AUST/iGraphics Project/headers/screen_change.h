@@ -1,4 +1,4 @@
-
+bool pause_button_flag = false;
 void screen_change(int mx,int my)
 {   
     int mouse_distance_from_center ; // as we are considering circle finding out the distance of mouse cursor from each circle center
@@ -52,7 +52,7 @@ void screen_change(int mx,int my)
 			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==7 )    screen = 3 ;
 			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==8)    screen = 3 ;
 
-            else if( screen >= 2 &&  screen <= 24  && mx >= 21 && mx <= 172 && my >= 553 && my <= 586  )  screen = 1 ;
+            else if( screen >= 2 &&  screen <= 23  && mx >= 21 && mx <= 172 && my >= 553 && my <= 586  )  screen = 1 ;
 
 			else if( mx >= 21 && mx <= 172 && my >= 553 && my <= 586 && screen == 22 )  screen = 3 ;
 
@@ -65,6 +65,9 @@ void screen_change(int mx,int my)
 			iResumeTimer(0);
 			screen = 7 ;
 			} 
+
+
+			
 
 
 			/**=======================================================================================================================
@@ -83,8 +86,31 @@ void screen_change(int mx,int my)
 			/**=======================================================================================================================
 			 *!                                                  Resume button of game screen
 			 *=======================================================================================================================**/
-            else if(  mx >= 870 && mx <= 986 && my >= 567 && my <= 593  && screen ==7 )    screen = 3  ;
-			else if(  mx >= 870 && mx <= 986 && my >= 524 && my <= 548  && screen ==7 )    screen = 24 ;
+            else if(  mx >= 870 && mx <= 986 && my >= 567 && my <= 593  && screen ==7 ) 
+			{
+				if (pause_button_flag == false)
+				{
+						iPauseTimer(timer_instruction_text_move);
+				iPauseTimer(timer_theta_change);
+				iPauseTimer(timer_ball_move);
+				iPauseTimer(timer_speedometer_change);
+				iPauseTimer(timer_obstacle_change);
+				pause_button_flag= true;
+
+				}	
+				else if (pause_button_flag)
+				{
+					iResumeTimer(timer_instruction_text_move);
+				iResumeTimer(timer_theta_change);
+				iResumeTimer(timer_ball_move);
+				iResumeTimer(timer_speedometer_change);
+				iResumeTimer(timer_obstacle_change);
+				pause_button_flag= false;
+
+				}
+				
+			}    
+			else if(  mx >= 870 && mx <= 986 && my >= 524 && my <= 548  && (screen ==7 || screen == 18 || screen == 19) )    screen = 24 ;
 
 
 			/**=======================================================================================================================
@@ -124,6 +150,18 @@ void screen_change(int mx,int my)
 
 			else if( mx >= 830 && mx <= 982 && my >= 32 && my <= 67 && screen == 20  )  screen = 21 ;
 
+
+			// no button from the save data screen
+			else if(  screen == 24  && mx >= 535 && mx <= 761 && my >= 157 && my <= 307 && level == 1 )  screen = 7 ;
+			else if(  screen == 24  && mx >= 535 && mx <= 761 && my >= 157 && my <= 307 && level == 2 )  screen = 18 ;
+			else if(  screen == 24  && mx >= 535 && mx <= 761 && my >= 157 && my <= 307 && level == 3 )  screen = 19 ;
+
+			else if(  screen == 24  && mx >= 213 && mx <= 438 && my >= 157 && my <= 307 && (level == 3 || level == 2 || level ==1) )  
+			{
+				//resume_data_appender();
+				screen = 3;
+
+			}
 
 
 			//else if( mx >= 353 && mx <= 597 && my >= 343 && my <= 398 && screen == 19 )  screen = 20 ;

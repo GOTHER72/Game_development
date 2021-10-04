@@ -1,15 +1,15 @@
 Highest Scores 
+parvez Name
+asd 1000
 Name mirz
 Point 120
 name tara
 point 95
 name tara
 point 95
-name yusha
-point 75
+ yusha
+ 75
  tanvir
  65
 name sajid
 point 45
-name fatin
-point 35

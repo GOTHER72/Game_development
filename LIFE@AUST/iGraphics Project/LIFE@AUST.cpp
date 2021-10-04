@@ -215,7 +215,7 @@ void resume_file_handler()
 {
 	resume_user_counter();
     resume_file_scanner();
-	resume_file_data_printer();
+	//resume_file_data_printer();
     
     //resume_data_assigner();
 }

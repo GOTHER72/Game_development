@@ -98,3 +98,9 @@ void resume_data_assigner()
 }
 
 
+void resume_data_appender()
+{
+
+}
+
+
