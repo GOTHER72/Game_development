@@ -73,12 +73,18 @@ void screen_change(int mx,int my)
 			/**=======================================================================================================================
 			 *!                                                   Play button and resume button
 			 *=======================================================================================================================**/
-            else if ( mx >= 379 && mx <= 623 && my >= 343 && my <= 396  && (screen == 3 || screen == 13) && resume_game_flag_throw == 1) screen = 15;
+            else if ( mx >= 379 && mx <= 623 && my >= 343 && my <= 396  && (screen == 3 || screen == 13) && resume_game_flag_throw == 1)
+			{
+				screen = 15;
+				certificate_name_flag  = 1;
+
+			} 
             else if ( mx >= 379 && mx <= 623 && my >= 216 && my <= 270  && (screen == 3 || screen == 13))
 			
 			{
 				mode=1;
 				screen = 22;
+				certificate_name_flag  = 2;
 
 			} 
 

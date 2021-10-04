@@ -14,19 +14,3 @@ name fatin
 point 25
 Name test2
 Point 10
-Name test2
-Point 30
-<<<<<<< HEAD
-Name test3
-Name parvez4
-Point 90
-Name par
-=======
-Name rrg
-Point 30
-Name rhge4r
-Name 4ey4
-Name dge
->>>>>>> f50ebed4d2837edf5e6ee133c91f751121f2ad54
-
-Name chandrima

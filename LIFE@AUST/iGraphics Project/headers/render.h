@@ -1,20 +1,4 @@
-int all_pic[50];
-int pic,pic_1;
-int flag_1=1;
-int i;
 
-/**================================================================================================
- *!                                        crush move
- *================================================================================================**/
-
-int girl_x=0,girl_y=300,bag_y=girl_y;
-int bag;
-int girl[40];
-char index=0;
-int bc,life_bar=0;
-int check=0;
-int bag_x,character_y=140;
-int crush_change_timer,bag_move_timer;
 void bag_move();
 void change();
 void timer();

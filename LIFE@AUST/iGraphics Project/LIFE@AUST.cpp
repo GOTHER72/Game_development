@@ -125,12 +125,15 @@ void iDraw()
 		 iShowImage(girl_x,girl_y,50,150,girl[index]);
 	 	 if(check==1) iShowImage(bag_x,bag_y,40,40,bag);
 	 	
-
-		book_state=1;
 		show_obstacle_image_3();
    		changable_text();
         screen_level_1_throw();
 		instruction_move_3();
+		if (flag_1>= 9)
+		{
+			iShowImage(0,0,screen_width,screen_height,screen_game_over);
+		}
+		
 	
 	}
 	if (screen == 20 ) 
@@ -158,7 +161,8 @@ void iDraw()
 	if (screen == 23 ) iShowImage(0,0,screen_width,screen_height,screen_name_not_found);
 
 	if (screen == 24 ) iShowImage(0,0,screen_width,screen_height,screen_append_data);
-		
+
+	
 	
 
 }

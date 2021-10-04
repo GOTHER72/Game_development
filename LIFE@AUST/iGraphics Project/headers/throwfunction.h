@@ -351,7 +351,7 @@ void level_controller_1()
 						level = 3;
 						user_point_appender(total_game_point);
 					}
-					else if (game_point < 10 )
+					else if (game_point < 10  )
 					{
 						screen = 16;
 						PlaySound("music\\Game over.wav",NULL,SND_ASYNC);

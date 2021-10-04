@@ -48,8 +48,16 @@ void changable_text(){
 void certificate_text()
 {	
 	iSetColor(86,116,127);
+	if (certificate_name_flag == 1)
+	{
+		iText(469, 309, details[total_user+1].name ,GLUT_BITMAP_TIMES_ROMAN_24);
+
+	}
+    else if (certificate_name_flag == 2)
+	{
+		iText(469, 309, resume_details[resume_user_number].resume_name ,GLUT_BITMAP_TIMES_ROMAN_24);
+	}
 	
-    iText(469, 309, details[total_user+1].name ,GLUT_BITMAP_TIMES_ROMAN_24);
 
 	
     iText(391, 220, "Three",GLUT_BITMAP_HELVETICA_18);

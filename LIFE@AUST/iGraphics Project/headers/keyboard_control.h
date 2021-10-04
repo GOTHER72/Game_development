@@ -12,6 +12,8 @@ void keyboard_control(unsigned char key)
 			total_game_point =0; // initializing the points and games from start
 			game_point =0;
 
+			
+
 			strcpy(details[total_user+1].name, player_name); // copying the string into a new structure
 			printf("%s\n", details[total_user+1].name);
 			user_name_appender(); // appending the name in a file upon clicking enter
@@ -41,12 +43,14 @@ void keyboard_control(unsigned char key)
 				if (resume_details[resume_user_number].resume_game_level == 1)
 				{
 						 screen = 7;
+						 level = resume_details[resume_user_number].resume_game_level;
 						 left_chances = resume_details[resume_user_number].resume_left_chances;
 						 game_point   = resume_details[resume_user_number].resume_game_point;
 				} 
 				else if (resume_details[resume_user_number].resume_game_level == 2)
 				{
 						 screen = 18;
+						 level = resume_details[resume_user_number].resume_game_level;
 						 left_chances = resume_details[resume_user_number].resume_left_chances;
 						 game_point   = resume_details[resume_user_number].resume_game_point;
 
@@ -54,6 +58,7 @@ void keyboard_control(unsigned char key)
 				else if (resume_details[resume_user_number].resume_game_level == 3) 
 				{
 						 screen = 19;
+						 level = resume_details[resume_user_number].resume_game_level;
 						 left_chances = resume_details[resume_user_number].resume_left_chances;
 						 game_point   = resume_details[resume_user_number].resume_game_point;
 					
@@ -85,7 +90,7 @@ void keyboard_control(unsigned char key)
 		}
 	}
 
-	if (key == 'p' && (screen == 7 || screen == 19))
+	if (key == 'p' && (screen == 7 || screen == 19 ))
 	{
 			book_state =0;
 	}
