@@ -1,6 +1,8 @@
 Highest Scores 
 Name test2
 Point 30
+Name test2
+Point 30
 name fatin
 point 25
 name sajid
@@ -11,5 +13,3 @@ name tanvir
 point 12
 name tanvir
 point 12
-Name test2
-Point 10

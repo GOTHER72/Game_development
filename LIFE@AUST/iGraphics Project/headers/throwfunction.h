@@ -288,6 +288,9 @@ void level_controller_1()
 						screen = 17;
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
+						throw_object_X=142;
+						throw_object_Y=158;
+						angle_set_throw=true;
 						level = 2;
 					}
 					else if (game_point <10 )
@@ -312,6 +315,9 @@ void level_controller_1()
 						
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
+						throw_object_X=142;
+						throw_object_Y=158;
+						angle_set_throw=true;
 						level = 3;
 					}
 					else if (game_point < 10 )
@@ -335,6 +341,9 @@ void level_controller_1()
 						screen = 20;
 						PlaySound("music\\levelup.wav",NULL,SND_ASYNC);
 						throw_ball=false;
+						throw_object_X=142;
+						throw_object_Y=158;
+						angle_set_throw=true;
 						level = 3;
 						user_point_appender(total_game_point);
 					}
