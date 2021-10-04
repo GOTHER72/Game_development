@@ -158,7 +158,7 @@ void screen_change(int mx,int my)
 
 			else if(  screen == 24  && mx >= 213 && mx <= 438 && my >= 157 && my <= 307 && (level == 3 || level == 2 || level ==1) )  
 			{
-				//resume_data_appender();
+				resume_data_appender();
 				screen = 3;
 
 			}

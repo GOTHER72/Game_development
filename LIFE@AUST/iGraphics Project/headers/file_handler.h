@@ -166,7 +166,7 @@ void user_name_appender()
 
    FILE *fp = fopen (FILENAME,"a");
 
-   if(fp==NULL)  printf("File \"%s\" does not exist!!!\n",FILENAME2);
+   if(fp==NULL)  printf("File \"%s\" does not exist!!!\n",FILENAME);
 
    else
    {

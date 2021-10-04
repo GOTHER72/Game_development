@@ -101,6 +101,21 @@ void resume_data_assigner()
 void resume_data_appender()
 {
 
+    FILE *fp = fopen (FILENAME3,"a");
+
+   if(fp==NULL)  printf("File \"%s\" does not exist!!!\n",FILENAME3);
+
+   else
+   {
+       fprintf(fp,"\nName %s\n",details[total_user+1].name);
+       fprintf(fp,"chances %d\n",left_chances);
+       fprintf(fp,"level %d\n",level);
+       fprintf(fp,"point %d",total_game_point);
+   }
+
+   fclose(fp);
+
 }
+
 
 
