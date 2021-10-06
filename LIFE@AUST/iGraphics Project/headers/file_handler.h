@@ -202,3 +202,73 @@ void high_score_shower(){
 	}
 }
 
+int *sort_decreasing_order_2(int *array){    //will sort the incoming array in descending order anr return it
+
+   int swap;
+   int range = total_user+2;
+   for (int i= 0 ; i< range - 1 ; i++)
+            {
+                for (int j = 0 ; j < range - i- 1; j++)
+                    {
+                    if (array[j] < array[j+1]) 
+                        {
+                            swap       = array[j];
+                            array[j]   = array[j+1];      // using bubble sort to sort the array 
+                            array[j+1] = swap;
+                         }
+                    }
+            }
+        return array; 
+}
+
+
+void high_score_shower_2(){
+
+   
+	for (int i = 0 ; i <= total_user +1 ; i ++ )
+   {
+      high_score_2[i] = details[i].point;
+   }
+
+   int* high_score_2_modified = (sort_decreasing_order_2(high_score_2));
+
+   for (int i =0 ; i < 7 ;i ++) {
+
+                     for	(int j = 0 ; j <=total_user+1;j++)
+                    {
+                         if (high_score_2_modified[i] == details[j].point)
+                            {
+                              strcpy (high_scorer[i].name , details[j].name);
+                              high_scorer[i].point = details[j].point;
+                              break; 
+                            }
+                    }
+				}
+
+	int high_score_dy = 50;
+	int high_score_y = 390;
+	char serial_char[10];
+	char high_score_char[10];
+	//highest_score_printer();
+	for (int i = 0 ; i < 7 ; i++)
+	{
+
+      //iSetColor(255,255,255);
+		std::sprintf(serial_char, "%d", i+1);
+		iText(230, high_score_y, serial_char,GLUT_BITMAP_TIMES_ROMAN_24); // for the serial of the high scorer
+
+		
+		std::sprintf(high_score_char, "%d", high_scorer[i].point);
+
+		iText(745, high_score_y, high_score_char,GLUT_BITMAP_TIMES_ROMAN_24);// for the points
+
+		iText(363, high_score_y , high_scorer[i].name,GLUT_BITMAP_TIMES_ROMAN_24); // for showing the names
+		high_score_y-=high_score_dy ;	
+		
+	}
+}
+
+
+
+
+

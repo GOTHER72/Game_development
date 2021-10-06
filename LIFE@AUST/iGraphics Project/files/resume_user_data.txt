@@ -10,7 +10,7 @@ name miraz
 chances 7
 level 2
 point 40
-name suckline
+name sukline
 chances 7
 level 3
 point 45
@@ -26,3 +26,11 @@ Name test3
 chances 10
 level 2
 point 10
+Name sukline
+chances 7
+level 1
+point 0
+Name tara
+chances 5
+level 3
+point 0

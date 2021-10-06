@@ -155,6 +155,8 @@ int instruction_move_flag =1,instruction_move_x = 1000 , instruction_move_dx = 5
 
 int certificate_name_flag = 0;
 
+int* high_score_2;
+
 
 
 /**================================================================================================

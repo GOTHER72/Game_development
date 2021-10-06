@@ -49,7 +49,12 @@ void screen_change(int mx,int my)
 			/**================================================================================================
 			 *!     This is the functionality of back button going back directly to the joystick screen
 			 *================================================================================================**/
-			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==7 )    screen = 3 ;
+			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && (screen ==7 || screen == 18 || screen == 19) )
+			{
+				 screen = 3 ;
+				 user_point_appender(total_game_point);
+
+			}   
 			else if(  mx >= 21 && mx <= 172 && my >= 553 && my <= 586  && screen ==8)    screen = 3 ;
 
             else if( screen >= 2 &&  screen <= 23  && mx >= 21 && mx <= 172 && my >= 553 && my <= 586  )  screen = 1 ;
@@ -203,4 +208,5 @@ void screen_change(int mx,int my)
 // screen = 21 means --------- this is for attaching the certificates
 // screen = 22 means --------- this is page for taking name input from resume option
 // screen = 23 means --------- this is the name not found screen
+// screen = 24 means --------- this is the page for user data appender
 
