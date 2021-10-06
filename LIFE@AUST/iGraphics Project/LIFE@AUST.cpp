@@ -49,21 +49,72 @@ Ahsanullah University of Science and Technology
 #include "headers//text_manager.h"
 #include "headers//keyboard_control.h"
 #include "headers//render.h"
+#include "headers//i_draw_functions.h"
+
+/**================================================================================================
+ *!                                       Functions Created by Developers
+ *================================================================================================**/
+
 
 void file_handler();
 void resume_file_handler();
+void screen_1_functions();
+void screen_2_functions();
+void screen_7_functions();
+void screen_12_functions();
+void screen_15_functions();
+void screen_18_functions();
+void screen_19_functions();
+
 
 void iDraw()
 {
 
 	iClear();
 	
-	//file_scanner();
-    if (screen == 1 || screen ==14 )
-    {
-        if(showMenu == false && loadMenu==true)				//loading screen
-	    {
+    if (screen == 1 || screen ==14 )	screen_1_functions();
+    if (screen == 2) 	screen_2_functions();
+    if (screen == 3)    iShowImage(0,0,1000,610,screen_play);
+    if (screen == 4)    iShowImage(0,0,1000,610,screen_member);
+    if (screen == 5)    iShowImage(0,0,1000,610,screen_story);
+    if (screen == 6)    iShowImage(0,0,1000,610,screen_control);
+    if (screen == 7) 	screen_7_functions();
+    if (screen == 8)    iShowImage(0,0,1000,610,screen_resume_game);
+	if (screen == 9)    iShowImage(0,0,1000,610,screen_member_light);
+	if (screen == 10)   iShowImage(0,0,1000,610,screen_control_light);
+	if (screen == 11)   iShowImage(0,0,1000,610,screen_story_light);
+	if (screen == 12)  	screen_12_functions();   
+	if (screen == 13)   iShowImage(0,0,1000,610,screen_play_light);
+	if (screen == 14)	iShowImage(0,0,1000,610,joystick_light);
+	if (screen == 15)	screen_15_functions();
+	if (screen == 16)   iShowImage(0,0,screen_width,screen_height,screen_game_over);
+	if (screen == 17)   iShowImage(0,0,screen_width,screen_height,screen_go_level_2);
+	if (screen == 18)	screen_18_functions();
+	if (screen == 19)   screen_19_functions();
+	if (screen == 20 )  iShowImage(0,0,screen_width,screen_height,screen_go_level_3);
+	if (screen == 21 ) 
+	{					iShowImage(0,0,screen_width,screen_height,screen_certificate);
+						certificate_text();	
+	}
+	if (screen == 22 ) 
+	{	
+		iShowImage(0,0,screen_width,screen_height,screen_input_resume);
+		if(mode == 1) {
+		iSetColor(255, 255, 255);
+		iText(300, 300, resume_player_name,GLUT_BITMAP_TIMES_ROMAN_24);
+		}
+		
+	}
+	if (screen == 23 ) iShowImage(0,0,screen_width,screen_height,screen_name_not_found);
 
+	if (screen == 24 ) iShowImage(0,0,screen_width,screen_height,screen_append_data);
+
+}
+
+void screen_1_functions()
+{
+    if(showMenu == false && loadMenu==true)				//loading screen
+	    {
 	        iShowImage(0,0,1000,610,screen);
 	        iSetColor(67,77,111);
 	        iRectangle(350,150,280,30);
@@ -75,41 +126,36 @@ void iDraw()
 		        menu();
 	        }
 	    goToMenuOptions();	   //calling goToMenuOptions
-    }
-    if (screen == 2)
-	{
-		 				iShowImage(0,0,1000,610,screen_highscore);
+
+}
+
+void screen_2_functions()
+{
+		iShowImage(0,0,1000,610,screen_highscore);
 						iSetColor(255,255,255);
 		 				high_score_shower();
-	}
-    if (screen == 3)    iShowImage(0,0,1000,610,screen_play);
-    if (screen == 4)    iShowImage(0,0,1000,610,screen_member);
-    if (screen == 5)    iShowImage(0,0,1000,610,screen_story);
-    if (screen == 6)    iShowImage(0,0,1000,610,screen_control);
-    if (screen == 7)
-    {
-                		iShowImage(0,0,1000,610,screen_level_1);
+
+}
+
+void screen_7_functions(){
+
+						iShowImage(0,0,1000,610,screen_level_1);
 						show_obstacle_image();
    						changable_text();
                 		screen_level_1_throw(); 
 						instruction_move();
-    }
-    if (screen == 8)     iShowImage(0,0,1000,610,screen_resume_game);
-	if (screen == 9)     iShowImage(0,0,1000,610,screen_member_light);
-	if (screen == 10)    iShowImage(0,0,1000,610,screen_control_light);
-	if (screen == 11)    iShowImage(0,0,1000,610,screen_story_light);
-	if (screen == 12)
-	{
+
+}
+void screen_12_functions()
+{
 						iShowImage(0,0,1000,610,screen_highscore_light);
 						iSetColor(67,77,111);
 						high_score_shower();
 		
-	}    
-	if (screen == 13)    iShowImage(0,0,1000,610,screen_play_light);
-	if (screen == 14)	 iShowImage(0,0,1000,610,joystick_light);
-	
-	if (screen == 15)
-	{
+}
+
+void screen_15_functions()
+{
 		iShowImage(0,0,1000,610,screen_input);
 		left_chances = 10;
 		game_point = 0;
@@ -117,12 +163,10 @@ void iDraw()
 		iSetColor(255, 255, 255);
 		iText(300, 300, player_name,GLUT_BITMAP_TIMES_ROMAN_24);
 		}
-	}
+}
 
-	if (screen == 16 ) iShowImage(0,0,screen_width,screen_height,screen_game_over);
-	if (screen == 17 ) iShowImage(0,0,screen_width,screen_height,screen_go_level_2);
-	if (screen == 18 )
-	{
+void screen_18_functions()
+{
 		iShowImage(0,0,screen_width,screen_height,screen_level_2);
 		book_state=1;
 		show_obstacle_image_2();
@@ -135,10 +179,10 @@ void iDraw()
 		printf("Throw %d\nAngle %d\nplayer %d", throw_ball,angle_set_throw,player);
 		checkvalue=2;
 		}
-	}
+}
 
-	if (screen == 19 )
-	{
+void screen_19_functions()
+{
 		iShowImage(0,0,screen_width,screen_height,screen_level_3);
 
 	// for the character render
@@ -159,36 +203,8 @@ void iDraw()
 		
 	
 	}
-	if (screen == 20 ) 
-	{
-		iShowImage(0,0,screen_width,screen_height,screen_go_level_3);
-		
-	}
-	if (screen == 21 ) 
-	{	
-		
-		iShowImage(0,0,screen_width,screen_height,screen_certificate);
-		certificate_text();
-		
-	}
-	if (screen == 22 ) 
-	{	
-		
-		iShowImage(0,0,screen_width,screen_height,screen_input_resume);
-		if(mode == 1) {
-		iSetColor(255, 255, 255);
-		iText(300, 300, resume_player_name,GLUT_BITMAP_TIMES_ROMAN_24);
-		}
-		
-	}
-	if (screen == 23 ) iShowImage(0,0,screen_width,screen_height,screen_name_not_found);
 
-	if (screen == 24 ) iShowImage(0,0,screen_width,screen_height,screen_append_data);
 
-	
-	
-
-}
 
 void iMouseMove(int mx, int my)
 {
@@ -245,7 +261,6 @@ void resume_file_handler()
 	resume_user_counter();
     resume_file_scanner();
 	//resume_file_data_printer();
-    
     //resume_data_assigner();
 }
 
@@ -259,17 +274,10 @@ void timer_control()
 	timer_obstacle_change = iSetTimer(20, rectangle_change_1);
 }
 
-
-
-
 int main()
 {
 	
 	iInitialize(frame_width, frame_height, "Life @ AUST");  //initializing the game frame
-	//iSetTimer(20,file_handler);
-
-	
-
 
 	file_handler();
 	resume_file_handler();
